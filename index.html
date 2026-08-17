@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Al Sayed Jewellers | Royal Fine Jewellery</title>
   
-  <!-- Google Fonts & FontAwesome -->
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -69,7 +69,7 @@
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
     }
 
@@ -102,7 +102,7 @@
     .social-header {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .social-header a {
@@ -110,8 +110,8 @@
       font-size: 0.95rem;
       border: 1px solid var(--gold-primary);
       border-radius: 50%;
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -129,7 +129,7 @@
     .hero {
       background: linear-gradient(rgba(3, 15, 10, 0.85), rgba(3, 15, 10, 0.85)), 
                   url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600') center/cover;
-      min-height: 75vh;
+      min-height: 65vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -186,18 +186,17 @@
       box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
     }
 
-    /* CONTAINER & TITLES */
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 50px 20px;
+      padding: 40px 20px;
     }
 
     .section-title {
       text-align: center;
       font-size: 1.6rem;
       letter-spacing: 3px;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       color: var(--gold-light);
     }
 
@@ -209,80 +208,120 @@
       margin-top: 8px;
     }
 
-    /* MAIN CATEGORY SELECTION (GOLD / SILVER) */
-    .category-tabs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+    /* BULLION RATE SECTION */
+    .rate-box {
+      background: var(--card-bg);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 25px 20px;
+      border-radius: 8px;
+      text-align: center;
       margin-bottom: 40px;
     }
 
-    .cat-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
+    .rate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    .cat-card:hover {
-      border-color: var(--gold-primary);
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
-      transform: translateY(-3px);
+    .rate-card {
+      background: rgba(3, 15, 10, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 15px 10px;
+      border-radius: 6px;
     }
 
-    .cat-img {
-      height: 180px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
-    .gold-img {
-      background-image: linear-gradient(to top, rgba(11, 45, 32, 0.9), transparent), url('https://images.unsplash.com/photo-1611591475140-438856db0cd1?auto=format&fit=crop&q=80&w=600');
-    }
-
-    .silver-img {
-      background-image: linear-gradient(to top, rgba(11, 45, 32, 0.9), transparent), url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600');
-    }
-
-    .cat-info {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .cat-info h3 {
-      font-size: 1.5rem;
+    .rate-card .type {
+      font-size: 0.8rem;
       color: var(--gold-light);
-      margin-bottom: 5px;
+      font-weight: 600;
     }
 
-    .cat-info p {
+    .rate-card .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 6px 0;
+    }
+
+    .rate-card .unit {
+      font-size: 0.7rem;
+      color: #888;
+    }
+
+    .rate-card .change {
       font-size: 0.75rem;
-      color: #aaa;
-      letter-spacing: 1px;
+      font-weight: 600;
+      margin-top: 6px;
     }
 
-    /* SUB CATEGORY GALLERY GRID */
+    .up { color: #4CAF50; }
+    .down { color: #F44336; }
+
+    /* INTERACTIVE CATEGORY TABS */
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .tab-btn {
+      background: var(--card-bg);
+      color: var(--gold-light);
+      border: 1px solid var(--gold-primary);
+      padding: 14px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      font-family: 'Cinzel', serif;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--gold-gradient);
+      color: #000;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+
+    /* GALLERY CONTENT PANELS */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
       margin-bottom: 50px;
     }
 
     .gallery-item {
       background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 8px;
       overflow: hidden;
       transition: all 0.3s ease;
+      text-align: center;
     }
 
     .gallery-item:hover {
       border-color: var(--gold-primary);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
     }
 
     .gallery-thumb {
@@ -292,12 +331,11 @@
     }
 
     .gallery-details {
-      padding: 15px;
-      text-align: center;
+      padding: 18px 12px;
     }
 
     .gallery-details h4 {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: var(--gold-light);
       margin-bottom: 5px;
     }
@@ -307,9 +345,11 @@
       color: var(--gold-primary);
       letter-spacing: 1px;
       text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
     }
 
-    /* MANUFACTURING & LOCATION BANNER */
+    /* DUAL BANNER */
     .dual-banner {
       background: var(--card-bg);
       border: 1px solid rgba(212, 175, 55, 0.3);
@@ -366,7 +406,7 @@
     }
 
     .footer-col i {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: var(--gold-primary);
       border: 1px solid rgba(212, 175, 55, 0.3);
       padding: 10px;
@@ -386,12 +426,13 @@
       color: #fff;
     }
 
-    /* RESPONSIVE DESIGN */
     @media (max-width: 768px) {
-      .category-tabs, .dual-banner, footer {
+      .dual-banner, footer {
         grid-template-columns: 1fr;
         flex-direction: column;
       }
+      .tab-buttons { flex-direction: row; }
+      .tab-btn { width: 50%; padding: 12px 10px; font-size: 0.95rem; }
       .hero h2 { font-size: 1.8rem; }
     }
   </style>
@@ -400,7 +441,7 @@
 
   <!-- TOP ANNOUNCEMENT BAR -->
   <div class="top-bar">
-    ❖ Certified Hallmark Gold & Silver Jewellery • Custom In-House Manufacturing ❖
+    ❖ Certified Hallmark Gold & Silver Jewellery • Custom Manufacturing Facility ❖
   </div>
 
   <!-- HEADER -->
@@ -413,12 +454,12 @@
       </div>
     </a>
     
-    <!-- Properly Spaced Icons -->
+    <!-- WhatsApp & Instagram Header Icons -->
     <div class="social-header">
-      <a href="https://wa.me/918826836771" target="_blank" title="WhatsApp Us">
+      <a href="https://wa.me/918826836771" target="_blank" title="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
       </a>
-      <a href="https://www.instagram.com/alsayedjewellers2026?igsh=MWdhMHdiM2JsZDg5NQ==" target="_blank" title="Instagram Profile">
+      <a href="https://www.instagram.com/alsayedjewellers2026?igsh=MWdhMHdiM2JsZDg5NQ==" target="_blank" title="Instagram">
         <i class="fa-brands fa-instagram"></i>
       </a>
     </div>
@@ -433,82 +474,145 @@
     </a>
   </section>
 
-  <!-- MAIN CONTAINER -->
   <div class="container">
 
-    <h2 class="section-title">SELECT CATEGORY</h2>
-
-    <!-- GOLD VS SILVER SELECTION -->
-    <div class="category-tabs">
-      <div class="cat-card" onclick="document.getElementById('gold-gallery').scrollIntoView();">
-        <div class="cat-img gold-img"></div>
-        <div class="cat-info">
-          <h3>GOLD COLLECTION</h3>
-          <p>Rings, Chains, Earrings, Necklaces & Pendants</p>
+    <!-- BULLION RATES -->
+    <div class="rate-box">
+      <h3 class="serif" style="color: var(--gold-light); letter-spacing: 2px;">TODAY'S BULLION RATE</h3>
+      <div class="rate-grid">
+        <div class="rate-card">
+          <div class="type">24K Gold</div>
+          <div class="price">₹7,230</div>
+          <div class="unit">/gram</div>
+          <div class="change up">▲ 35</div>
         </div>
-      </div>
-
-      <div class="cat-card" onclick="document.getElementById('silver-gallery').scrollIntoView();">
-        <div class="cat-img silver-img"></div>
-        <div class="cat-info">
-          <h3>SILVER COLLECTION</h3>
-          <p>Rings, Bracelets, Chains & High Polish Sets</p>
+        <div class="rate-card">
+          <div class="type">22K Gold</div>
+          <div class="price">₹6,630</div>
+          <div class="unit">/gram</div>
+          <div class="change up">▲ 30</div>
         </div>
-      </div>
-    </div>
-
-    <!-- GOLD GALLERY SECTION -->
-    <h2 id="gold-gallery" class="section-title" style="margin-top: 40px;">GOLD SELECTION</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=500');"></div>
-        <div class="gallery-details">
-          <h4>Gold Rings</h4>
-          <span>22K / 18K Hallmark</span>
+        <div class="rate-card">
+          <div class="type">18K Gold</div>
+          <div class="price">₹5,420</div>
+          <div class="unit">/gram</div>
+          <div class="change up">▲ 25</div>
         </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=500');"></div>
-        <div class="gallery-details">
-          <h4>Gold Chains</h4>
-          <span>Classic & Modern Designs</span>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&q=80&w=500');"></div>
-        <div class="gallery-details">
-          <h4>Gold Earrings</h4>
-          <span>Bespoke Craftsmanship</span>
+        <div class="rate-card">
+          <div class="type">Silver</div>
+          <div class="price">₹89.50</div>
+          <div class="unit">/gram</div>
+          <div class="change down">▼ 0.50</div>
         </div>
       </div>
     </div>
 
-    <!-- SILVER GALLERY SECTION -->
-    <h2 id="silver-gallery" class="section-title" style="margin-top: 40px;">SILVER SELECTION</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&q=80&w=500');"></div>
-        <div class="gallery-details">
-          <h4>Silver Rings & Bracelets</h4>
-          <span>925 Sterling Quality</span>
+    <!-- OUR COLLECTIONS (TAP TO SWITCH) -->
+    <h2 class="section-title">OUR COLLECTIONS</h2>
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="switchTab('gold')">GOLD</button>
+      <button class="tab-btn" onclick="switchTab('silver')">SILVER</button>
+    </div>
+
+    <!-- GOLD COLLECTION ITEMS -->
+    <div id="gold-tab" class="tab-content active">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Gold Rings</h4>
+            <span>22K / 18K BIS Hallmark</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Rings" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
         </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1611591475140-438856db0cd1?auto=format&fit=crop&q=80&w=500');"></div>
-        <div class="gallery-details">
-          <h4>High Polish Silver Sets</h4>
-          <span>Luxury Mirror Finish</span>
+
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Gold Chains</h4>
+            <span>Classic & Machine Chains</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Chains" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Gold Earrings</h4>
+            <span>Jhumkas, Tops & Studs</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Earrings" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Gold Necklaces</h4>
+            <span>Bridal & Heavy Sets</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Necklaces" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1611591475140-438856db0cd1?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Gold Pendants</h4>
+            <span>Lightweight & Fancy Pendants</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Pendants" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- MANUFACTURING & LOCATION DUAL BANNER -->
+    <!-- SILVER COLLECTION ITEMS -->
+    <div id="silver-tab" class="tab-content">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Silver Rings</h4>
+            <span>925 Sterling Silver</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Rings" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1611591475140-438856db0cd1?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Silver Bracelets</h4>
+            <span>Kadas & Gents Bracelets</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Bracelets" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>Silver Chains</h4>
+            <span>Italian & Italian Cut Chains</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Chains" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=500');"></div>
+          <div class="gallery-details">
+            <h4>High Polish Sets</h4>
+            <span>Mirror Polish Ornaments</span>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20High%20Polish%20Silver%20Sets" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWROOM & MANUFACTURING BANNER -->
     <div class="dual-banner">
       <div class="banner-col">
         <i class="fa-solid fa-store"></i>
         <div>
           <h3>VISIT OUR SHOWROOM</h3>
-          <p>Experience our hallmark collection in person and consult with our jewellery specialists.</p>
+          <p>Explore our exclusive collection in person and consult with our experts at our flagship boutique.</p>
           <a href="https://maps.app.goo.gl/SxfXYjNuWSgAVQ6D7?g_st=ic" target="_blank" class="btn-royal">GET DIRECTIONS</a>
         </div>
       </div>
@@ -516,8 +620,8 @@
         <i class="fa-solid fa-industry"></i>
         <div>
           <h3>IN-HOUSE MANUFACTURING</h3>
-          <p>We take custom design orders! Produced directly in our own manufacturing facility.</p>
-          <a href="https://wa.me/918826836771" target="_blank" class="btn-royal">ORDER CUSTOM DESIGN</a>
+          <p>We accept custom manufacturing orders! Get your preferred designs crafted directly in our own factory.</p>
+          <a href="https://wa.me/918826836771?text=Hi,%20I%20want%20to%20order%20a%20custom%20jewellery%20design" target="_blank" class="btn-royal">CUSTOM ORDER INQUIRY</a>
         </div>
       </div>
     </div>
@@ -548,6 +652,22 @@
       </div>
     </a>
   </footer>
+
+  <!-- SCRIPT TO SWITCH TABS -->
+  <script>
+    function switchTab(type) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+      if(type === 'gold') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('gold-tab').classList.add('active');
+      } else {
+        document.querySelectorAll('.tab-btn')[1].classList.add('active');
+        document.getElementById('silver-tab').classList.add('active');
+      }
+    }
+  </script>
 
 </body>
 </html>
