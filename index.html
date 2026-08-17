@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Al Sayed Jewellers | Royal Fine Jewellery</title>
   
-  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +39,6 @@
       font-family: 'Cinzel', serif;
     }
 
-    /* TOP ANNOUNCEMENT BAR */
     .top-bar {
       background: linear-gradient(90deg, #020b07, #0a2e20, #020b07);
       text-align: center;
@@ -52,7 +50,6 @@
       text-transform: uppercase;
     }
 
-    /* HEADER & NAVIGATION */
     header {
       background: rgba(7, 34, 24, 0.98);
       backdrop-filter: blur(10px);
@@ -125,7 +122,6 @@
       box-shadow: 0 0 10px var(--gold-primary);
     }
 
-    /* HERO SECTION */
     .hero {
       background: linear-gradient(rgba(3, 15, 10, 0.85), rgba(3, 15, 10, 0.85)), 
                   url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600') center/cover;
@@ -163,6 +159,7 @@
       letter-spacing: 1.5px;
     }
 
+    /* SHINING GOLD BUTTON EFFECT */
     .btn-royal {
       background: var(--gold-gradient);
       color: #000;
@@ -177,13 +174,35 @@
       gap: 10px;
       text-decoration: none;
       border-radius: 3px;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn-royal::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+      transition: 0.5s;
+      animation: shine 2.5s infinite;
+      z-index: 2;
+    }
+
+    @keyframes shine {
+      0% { left: -100%; }
+      20% { left: 100%; }
+      100% { left: 100%; }
     }
 
     .btn-royal:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
     }
 
     .container {
@@ -208,7 +227,6 @@
       margin-top: 8px;
     }
 
-    /* BULLION RATE SECTION (DELHI ACCURATE) */
     .rate-box {
       background: var(--card-bg);
       border: 1px solid rgba(212, 175, 55, 0.35);
@@ -216,7 +234,6 @@
       border-radius: 8px;
       text-align: center;
       margin-bottom: 40px;
-      position: relative;
     }
 
     .rate-header {
@@ -290,7 +307,6 @@
       margin-top: 15px;
     }
 
-    /* INTERACTIVE CATEGORY TABS */
     .tab-buttons {
       display: flex;
       justify-content: center;
@@ -318,7 +334,6 @@
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
     }
 
-    /* GALLERY CONTENT PANELS */
     .tab-content {
       display: none;
       animation: fadeIn 0.4s ease-in-out;
@@ -380,7 +395,6 @@
       margin-bottom: 12px;
     }
 
-    /* DUAL BANNER */
     .dual-banner {
       background: var(--card-bg);
       border: 1px solid rgba(212, 175, 55, 0.3);
@@ -416,7 +430,6 @@
       margin-bottom: 15px;
     }
 
-    /* FOOTER */
     footer {
       background: #020b07;
       border-top: 1px solid rgba(212, 175, 55, 0.3);
@@ -470,12 +483,10 @@
 </head>
 <body>
 
-  <!-- TOP ANNOUNCEMENT BAR -->
   <div class="top-bar">
     ❖ Certified Hallmark Gold & Silver Jewellery • Custom Manufacturing Facility ❖
   </div>
 
-  <!-- HEADER -->
   <header>
     <a href="#" class="brand-logo">
       <i class="fa-solid fa-crown"></i>
@@ -485,7 +496,6 @@
       </div>
     </a>
     
-    <!-- WhatsApp & Instagram Header Icons -->
     <div class="social-header">
       <a href="https://wa.me/918826836771" target="_blank" title="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
@@ -496,7 +506,6 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero">
     <h2>Timeless Royalty.<br><span>Crafted With Perfection.</span></h2>
     <p>Exclusive Gold & Silver Fine Jewellery</p>
@@ -507,7 +516,6 @@
 
   <div class="container">
 
-    <!-- BULLION RATES (DELHI LIVE MARKET) -->
     <div class="rate-box">
       <div class="rate-header">
         <h3 class="serif" style="color: var(--gold-light); letter-spacing: 2px;">TODAY'S BULLION RATE (DELHI)</h3>
@@ -546,7 +554,6 @@
       </div>
     </div>
 
-    <!-- OUR COLLECTIONS (TAP TO SWITCH) -->
     <h2 class="section-title">OUR COLLECTIONS</h2>
 
     <div class="tab-buttons">
@@ -554,7 +561,6 @@
       <button class="tab-btn" onclick="switchTab('silver')">SILVER</button>
     </div>
 
-    <!-- GOLD COLLECTION ITEMS -->
     <div id="gold-tab" class="tab-content active">
       <div class="gallery-grid">
         <div class="gallery-item">
@@ -604,7 +610,6 @@
       </div>
     </div>
 
-    <!-- SILVER COLLECTION ITEMS -->
     <div id="silver-tab" class="tab-content">
       <div class="gallery-grid">
         <div class="gallery-item">
@@ -645,7 +650,6 @@
       </div>
     </div>
 
-    <!-- SHOWROOM & MANUFACTURING BANNER -->
     <div class="dual-banner">
       <div class="banner-col">
         <i class="fa-solid fa-store"></i>
@@ -667,7 +671,6 @@
 
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <a href="tel:8826836771" class="footer-col">
       <i class="fa-solid fa-phone"></i>
@@ -692,9 +695,7 @@
     </a>
   </footer>
 
-  <!-- SCRIPT FOR TABS & LIVE AUTO UPDATE TIME -->
   <script>
-    // Tab switching functionality
     function switchTab(type) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
@@ -708,7 +709,6 @@
       }
     }
 
-    // Auto Timestamp Update for live feel
     function updateTimestamp() {
       const now = new Date();
       const options = { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
