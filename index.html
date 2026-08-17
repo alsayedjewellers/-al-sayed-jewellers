@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Al Sayed Jewellers | Fine Jewellery & Bullion Rates</title>
+  <title>Al Sayed Jewellers | Royal Heritage & Fine Bullion</title>
   
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    /* 7-STAR LUXURY HOTEL MENU COLOR PALETTE (GILDED NOIR) */
+    /* VIBRANT ROYAL EMERALD & WARM GOLD PALETTE */
     :root {
-      --royal-dark: #0a0b0d;         /* Ultra-Dark Obsidian Matte */
-      --royal-green: #121418;        /* Dark Slate Base */
-      --card-bg: #15181e;            /* Fine-Dining Menu Card BG */
-      --gold-primary: #d4af37;       /* Metallic Imperial Gold */
-      --gold-light: #f5e6be;         /* Soft Champagne Accent */
-      --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
-      --text-cream: #f8f5ef;         /* Ivory Menu Text */
+      --bg-dark: #061513;             /* Deep Emerald Night */
+      --card-bg: #0d2521;             /* Rich Forest Emerald */
+      --card-inner: #12302b;          /* Soft Emerald Shimmer */
+      --gold-primary: #f2c94c;        /* Bright Sunlit Gold */
+      --gold-light: #fff0bd;          /* Vibrant Champagne Glow */
+      --gold-dark: #d4a317;           /* Rich Amber Gold */
+      --gold-gradient: linear-gradient(135deg, #ffe082 0%, #f2c94c 50%, #d4a317 100%);
+      --text-cream: #fdfbf7;          /* Pure Pearl Warm White */
+      --text-subtle: #cbdcd8;         /* Minty Ice Accent */
+      --ruby-accent: #e63946;         /* Joyful Ruby Red */
+      --gold-border: rgba(242, 201, 76, 0.45);
     }
 
     * {
@@ -31,10 +35,14 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--royal-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
       color: var(--text-cream);
-      line-height: 1.6;
+      line-height: 1.7;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(242, 201, 76, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 100% 50%, rgba(18, 48, 43, 0.8) 0%, transparent 60%);
+      background-attachment: fixed;
     }
 
     h1, h2, h3, h4, .serif {
@@ -43,143 +51,165 @@
 
     /* TOP ANNOUNCEMENT BAR */
     .top-bar {
-      background: linear-gradient(90deg, #050506, #15181e, #050506);
+      background: linear-gradient(90deg, #040e0c, #0e2924, #040e0c);
       text-align: center;
-      padding: 8px 12px;
-      font-size: 0.7rem;
-      letter-spacing: 1.5px;
+      padding: 10px 15px;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
       color: var(--gold-light);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      border-bottom: 1px solid var(--gold-border);
       text-transform: uppercase;
+      font-weight: 600;
     }
 
     /* HEADER */
     header {
-      background: rgba(10, 11, 13, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 12px 5%;
+      background: rgba(6, 21, 19, 0.92);
+      backdrop-filter: blur(15px);
+      padding: 16px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      border-bottom: 1px solid rgba(242, 201, 76, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
 
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
       text-decoration: none;
     }
 
     .brand-logo i {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       background: var(--gold-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 10px rgba(242, 201, 76, 0.5));
     }
 
     .brand-text h1 {
       font-family: 'Cinzel Decorative', serif;
-      font-size: 1.1rem;
-      letter-spacing: 2px;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
       background: var(--gold-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 1.1;
+      font-weight: 900;
     }
 
     .brand-text span {
-      font-size: 0.55rem;
-      letter-spacing: 2px;
+      font-size: 0.58rem;
+      letter-spacing: 3px;
       display: block;
       color: var(--gold-light);
       text-transform: uppercase;
-      margin-top: 3px;
+      margin-top: 4px;
+      font-weight: 600;
     }
 
     .social-header {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .social-header a {
       color: var(--gold-light);
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       border: 1px solid var(--gold-primary);
       border-radius: 50%;
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       text-decoration: none;
+      background: rgba(242, 201, 76, 0.08);
     }
 
     .social-header a:hover {
-      background: var(--gold-primary);
-      color: var(--royal-dark);
-      box-shadow: 0 0 10px var(--gold-primary);
+      background: var(--gold-gradient);
+      color: var(--bg-dark);
+      box-shadow: 0 0 18px rgba(242, 201, 76, 0.8);
+      transform: translateY(-3px) scale(1.05);
     }
 
-    /* HERO SECTION (UPDATED HEADING & SLOGAN) */
+    /* HERO SECTION */
     .hero {
-      background: linear-gradient(rgba(10, 11, 13, 0.88), rgba(10, 11, 13, 0.88)), 
+      background: linear-gradient(rgba(6, 21, 19, 0.82), rgba(6, 21, 19, 0.9)), 
                   url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600') center/cover;
-      min-height: 55vh;
+      min-height: 58vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 50px 20px;
-      border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+      padding: 60px 20px;
+      border-bottom: 2px solid var(--gold-border);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "❖ ✦ ❖";
+      position: absolute;
+      bottom: -13px;
+      background: var(--bg-dark);
+      padding: 0 20px;
+      color: var(--gold-primary);
+      font-size: 0.85rem;
+      letter-spacing: 5px;
     }
 
     .hero h2 {
-      font-size: 2.3rem;
-      font-weight: 700;
+      font-size: 2.9rem;
+      font-weight: 900;
       line-height: 1.2;
-      letter-spacing: 3px;
+      letter-spacing: 5px;
       background: var(--gold-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-family: 'Cinzel Decorative', serif;
+      filter: drop-shadow(0 4px 15px rgba(242, 201, 76, 0.3));
     }
 
     .hero p {
-      margin: 15px 0 30px;
+      margin: 18px 0 35px;
       font-size: 0.9rem;
       color: var(--gold-light);
-      font-weight: 400;
-      letter-spacing: 2px;
+      font-weight: 500;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     /* CONTINUOUS SHINE BUTTON EFFECT */
     .btn-royal {
       background: var(--gold-gradient);
-      color: #000;
-      padding: 12px 28px;
+      color: #0b1f1c;
+      padding: 14px 34px;
       border: none;
-      font-weight: 700;
-      font-size: 0.8rem;
-      letter-spacing: 1.5px;
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
-      border-radius: 3px;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 4px;
+      box-shadow: 0 6px 25px rgba(242, 201, 76, 0.4);
+      transition: all 0.4s ease;
       position: relative;
       overflow: hidden;
       z-index: 1;
+      text-transform: uppercase;
     }
 
     .btn-royal::before {
@@ -192,11 +222,11 @@
       background: linear-gradient(
         90deg, 
         transparent 0%, 
-        rgba(255, 255, 255, 0.85) 50%, 
+        rgba(255, 255, 255, 0.95) 50%, 
         transparent 100%
       );
       transform: skewX(-25deg);
-      animation: continuousShine 3s infinite ease-in-out;
+      animation: continuousShine 2.8s infinite ease-in-out;
       z-index: 2;
     }
 
@@ -207,66 +237,68 @@
     }
 
     .btn-royal:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(242, 201, 76, 0.7);
     }
 
-    /* MAIN CONTAINER & 7-STAR MENU BORDERS */
+    /* CONTAINER & 7-STAR MENU DOUBLE-BORDER EFFECT */
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
-    /* MENU CARD DOUBLE GOLD BORDER EFFECT */
     .rate-box, .gallery-item, .dual-banner {
       background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.4) !important;
-      outline: 1px solid rgba(212, 175, 55, 0.15);
-      outline-offset: -5px;
+      border: 1px solid var(--gold-border) !important;
+      outline: 1px solid rgba(242, 201, 76, 0.2);
+      outline-offset: -6px;
       border-radius: 6px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
     }
 
     .section-title {
       text-align: center;
-      font-size: 1.6rem;
-      letter-spacing: 3px;
-      margin-bottom: 30px;
+      font-size: 1.9rem;
+      letter-spacing: 4px;
+      margin-bottom: 35px;
       color: var(--gold-light);
+      font-weight: 700;
     }
 
     .section-title::after {
       content: "❖";
       display: block;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       color: var(--gold-primary);
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     /* BULLION RATE SECTION */
     .rate-box {
-      padding: 25px 20px;
+      padding: 35px 25px;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 55px;
     }
 
     .rate-header {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .live-tag {
-      background: #e53935;
+      background: var(--ruby-accent);
       color: #fff;
-      font-size: 0.6rem;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-weight: 700;
+      font-size: 0.62rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 800;
       animation: blink 1.5s infinite;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      box-shadow: 0 0 10px rgba(230, 57, 70, 0.6);
     }
 
     @keyframes blink {
@@ -276,81 +308,90 @@
 
     .rate-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
     }
 
     .rate-card {
-      background: rgba(10, 11, 13, 0.7);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      padding: 15px 10px;
+      background: var(--card-inner);
+      border: 1px solid rgba(242, 201, 76, 0.3);
+      padding: 20px 12px;
       border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .rate-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-primary);
     }
 
     .rate-card .type {
       font-size: 0.8rem;
       color: var(--gold-light);
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .rate-card .price {
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-size: 1.35rem;
+      font-weight: 800;
       color: #fff;
-      margin: 6px 0;
+      margin: 8px 0;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .rate-card .unit {
       font-size: 0.7rem;
-      color: #aaa;
+      color: var(--text-subtle);
     }
 
     .rate-card .change {
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-top: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 8px;
     }
 
-    .up { color: #4CAF50; }
+    .up { color: #52c41a; }
 
     .last-update {
-      font-size: 0.65rem;
-      color: #aaa;
-      margin-top: 15px;
+      font-size: 0.7rem;
+      color: var(--text-subtle);
+      margin-top: 22px;
+      letter-spacing: 1px;
     }
 
     /* TABS & GALLERY */
     .tab-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-bottom: 30px;
+      gap: 20px;
+      margin-bottom: 40px;
     }
 
     .tab-btn {
       background: var(--card-bg);
       color: var(--gold-light);
       border: 1px solid var(--gold-primary);
-      padding: 12px 35px;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      padding: 14px 42px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 3px;
       cursor: pointer;
       border-radius: 4px;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
       font-family: 'Cinzel', serif;
     }
 
     .tab-btn.active, .tab-btn:hover {
       background: var(--gold-gradient);
-      color: #000;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+      color: #081d1a;
+      box-shadow: 0 0 25px rgba(242, 201, 76, 0.5);
     }
 
     .tab-content {
       display: none;
-      animation: fadeIn 0.4s ease-in-out;
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .tab-content.active {
@@ -358,125 +399,138 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(15px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-bottom: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
     }
 
     .gallery-item {
       overflow: hidden;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       text-align: center;
     }
 
     .gallery-item:hover {
       border-color: var(--gold-primary) !important;
-      transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(242, 201, 76, 0.3);
     }
 
     .gallery-thumb {
-      height: 200px;
+      height: 220px;
       background-size: cover;
       background-position: center;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover .gallery-thumb {
+      transform: scale(1.06);
     }
 
     .gallery-details {
-      padding: 18px 12px;
+      padding: 24px 15px;
+      background: var(--card-bg);
+      position: relative;
+      z-index: 2;
     }
 
     .gallery-details h4 {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: var(--gold-light);
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
     }
 
     .gallery-details span {
       font-size: 0.7rem;
       color: var(--gold-primary);
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+      font-weight: 600;
     }
 
     /* DUAL BANNER */
     .dual-banner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding: 30px;
-      gap: 30px;
-      margin-bottom: 50px;
+      padding: 38px;
+      gap: 35px;
+      margin-bottom: 60px;
     }
 
     .banner-col {
       display: flex;
-      gap: 15px;
+      gap: 22px;
       align-items: flex-start;
     }
 
     .banner-col i {
-      font-size: 2rem;
+      font-size: 2.4rem;
       color: var(--gold-primary);
+      filter: drop-shadow(0 0 8px rgba(242, 201, 76, 0.4));
     }
 
     .banner-col h3 {
       color: var(--gold-light);
-      font-size: 1rem;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
     }
 
     .banner-col p {
-      font-size: 0.8rem;
-      color: #ccc;
-      margin-bottom: 15px;
+      font-size: 0.85rem;
+      color: var(--text-subtle);
+      margin-bottom: 20px;
     }
 
     /* FOOTER */
     footer {
-      background: #050506;
-      border-top: 1px solid rgba(212, 175, 55, 0.3);
-      padding: 30px 5%;
+      background: #040e0c;
+      border-top: 1px solid var(--gold-border);
+      padding: 40px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 25px;
     }
 
     .footer-col {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
       text-decoration: none;
       color: inherit;
     }
 
     .footer-col i {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       color: var(--gold-primary);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      padding: 10px;
+      border: 1px solid var(--gold-border);
+      padding: 12px;
       border-radius: 50%;
+      background: rgba(242, 201, 76, 0.08);
     }
 
     .footer-col div label {
       display: block;
-      font-size: 0.65rem;
+      font-size: 0.68rem;
       color: var(--gold-light);
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
     }
 
     .footer-col div span {
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.95rem;
+      font-weight: 700;
       color: #fff;
     }
 
@@ -485,8 +539,8 @@
         grid-template-columns: 1fr;
         flex-direction: column;
       }
-      .hero h2 { font-size: 1.7rem; }
-      .tab-btn { padding: 10px 25px; }
+      .hero h2 { font-size: 2rem; }
+      .tab-btn { padding: 12px 30px; font-size: 0.82rem; }
     }
   </style>
 </head>
@@ -517,7 +571,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION WITH NEW HEADING & SLOGAN -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <h2>AL SAYED JEWELLERS</h2>
     <p>Curators of Fine Heritage & Certified Gold Artistry</p>
@@ -568,7 +622,7 @@
     </div>
 
     <!-- COLLECTIONS TABS -->
-    <h2 class="section-title">OUR MENU & COLLECTIONS</h2>
+    <h2 class="section-title">OUR BOUTIQUE MENU</h2>
 
     <div class="tab-buttons">
       <button class="tab-btn active" onclick="switchTab('gold')">GOLD</button>
@@ -583,7 +637,7 @@
           <div class="gallery-details">
             <h4>Gold Rings</h4>
             <span>22K / 18K BIS Hallmark</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Rings" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Rings" target="_blank" class="btn-royal" style="padding: 10px 22px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
 
@@ -592,7 +646,7 @@
           <div class="gallery-details">
             <h4>Gold Chains</h4>
             <span>Classic & Machine Chains</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Chains" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Chains" target="_blank" class="btn-royal" style="padding: 10px 22px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
 
@@ -601,7 +655,7 @@
           <div class="gallery-details">
             <h4>Gold Earrings</h4>
             <span>Jhumkas, Tops & Studs</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Earrings" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Earrings" target="_blank" class="btn-royal" style="padding: 10px 22px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
 
@@ -610,7 +664,7 @@
           <div class="gallery-details">
             <h4>Gold Necklaces</h4>
             <span>Bridal & Heavy Sets</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Necklaces" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Necklaces" target="_blank" class="btn-royal" style="padding: 10px 22px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
       </div>
@@ -624,7 +678,7 @@
           <div class="gallery-details">
             <h4>Silver Rings</h4>
             <span>925 Sterling Silver</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Rings" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Rings" target="_blank" class="btn-royal" style="padding: 10px 22px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
 
@@ -633,7 +687,7 @@
           <div class="gallery-details">
             <h4>Silver Bracelets</h4>
             <span>Kadas & Gents Bracelets</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Bracelets" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
+            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Bracelets" target="_blank" class="btn-royal" style="padding: 10px 22px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
       </div>
