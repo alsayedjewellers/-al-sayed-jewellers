@@ -13,12 +13,12 @@
             theme: {
                 extend: {
                     colors: {
-                        brandDark: '#031812',
-                        brandGreen: '#06281E',
-                        brandCream: '#F5F1E8',
-                        brandCard: '#EDE7D9',
-                        goldBase: '#C5A059',
-                        goldLight: '#E6C57A',
+                        brandDark: '#03121D',      /* Emerald Blue Dark Foundation */
+                        brandGreen: '#06202E',     /* Rich Emerald-Blue Accent */
+                        brandCream: '#F4F7F6',
+                        brandCard: '#EAF0F2',      /* Soft Blue-Gray Cream Card Background */
+                        goldBase: '#D4AF37',
+                        goldLight: '#F3E5AB',
                         goldDark: '#997A15'
                     },
                     fontFamily: {
@@ -39,10 +39,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
 
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F5F1E8; color: #1a1a1a; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F7F6; color: #1a1a1a; }
         .font-cinzel { font-family: 'Cinzel', serif; }
-        .gold-text { color: #C5A059; }
-        .gold-bg { background-color: #C5A059; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between">
@@ -83,8 +83,8 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION (Velvet Emerald & Luxury Jewelry Showcase) -->
-    <header class="relative bg-brandDark text-white py-16 px-6 overflow-hidden border-b border-goldBase/20">
+    <!-- HERO SECTION (Emerald Blue Theme) -->
+    <header class="relative bg-brandDark text-white py-16 px-6 overflow-hidden border-b border-goldBase/25 shadow-2xl">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div class="space-y-6">
                 <h1 class="text-4xl md:text-6xl font-cinzel font-black tracking-wide leading-tight">
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="relative flex justify-center">
-                <div class="absolute inset-0 bg-goldBase/10 rounded-full blur-3xl"></div>
+                <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl"></div>
                 <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=700&q=80" alt="Royal Necklace" class="relative rounded-xl border border-goldBase/40 shadow-2xl max-h-80 object-cover w-full">
             </div>
         </div>
@@ -127,27 +127,27 @@
                     </div>
                     <!-- CATEGORY LINKS GRID -->
                     <div class="grid grid-cols-2 gap-4 text-xs font-cinzel font-semibold text-gray-800 mb-6 px-2">
-                        <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
+                        <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-ring text-goldBase"></i> Rings
                         </button>
-                        <button onclick="filterCategory('bangle', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
+                        <button onclick="filterCategory('bangle', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-circle-dot text-goldBase"></i> Bangles
                         </button>
-                        <button onclick="filterCategory('chain', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
+                        <button onclick="filterCategory('chain', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-link text-goldBase"></i> Chains
                         </button>
-                        <button onclick="filterCategory('necklace', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
+                        <button onclick="filterCategory('necklace', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-gem text-goldBase"></i> Necklaces
                         </button>
-                        <button onclick="filterCategory('earring', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
+                        <button onclick="filterCategory('earring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-feather text-goldBase"></i> Earrings
                         </button>
-                        <button onclick="filterCategory('pendant', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
+                        <button onclick="filterCategory('pendant', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-star text-goldBase"></i> Pendants
                         </button>
                     </div>
                 </div>
-                <button onclick="switchMetal('gold')" class="w-full bg-brandDark text-goldBase font-cinzel font-bold py-3 rounded-xl tracking-widest text-xs hover:bg-black transition-all">
+                <button onclick="switchMetal('gold')" class="w-full bg-brandDark text-goldBase font-cinzel font-bold py-3 rounded-xl tracking-widest text-xs hover:bg-brandGreen transition-all">
                     EXPLORE GOLD <i class="fa-solid fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -163,24 +163,24 @@
                     </div>
                     <!-- CATEGORY LINKS GRID -->
                     <div class="grid grid-cols-2 gap-4 text-xs font-cinzel font-semibold text-gray-800 mb-6 px-2">
-                        <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
-                            <i class="fa-solid fa-ring text-gray-600"></i> Rings
+                        <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-ring text-blue-900"></i> Rings
                         </button>
-                        <button onclick="filterCategory('high-polish', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
-                            <i class="fa-solid fa-wand-magic-sparkles text-gray-600"></i> High Polish Sets
+                        <button onclick="filterCategory('high-polish', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-wand-magic-sparkles text-blue-900"></i> High Polish Sets
                         </button>
-                        <button onclick="filterCategory('bracelet', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
-                            <i class="fa-solid fa-circle-notch text-gray-600"></i> Bracelets
+                        <button onclick="filterCategory('bracelet', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-circle-notch text-blue-900"></i> Bracelets
                         </button>
-                        <button onclick="filterCategory('other', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
-                            <i class="fa-solid fa-shapes text-gray-600"></i> Other Silver Jewellery
+                        <button onclick="filterCategory('other', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-shapes text-blue-900"></i> Other Silver Jewellery
                         </button>
-                        <button onclick="filterCategory('chain', event)" class="flex items-center gap-2 hover:text-goldDark transition-colors text-left">
-                            <i class="fa-solid fa-link text-gray-600"></i> Chains
+                        <button onclick="filterCategory('chain', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-link text-blue-900"></i> Chains
                         </button>
                     </div>
                 </div>
-                <button onclick="switchMetal('silver')" class="w-full bg-brandDark text-white font-cinzel font-bold py-3 rounded-xl tracking-widest text-xs hover:bg-black transition-all">
+                <button onclick="switchMetal('silver')" class="w-full bg-brandDark text-white font-cinzel font-bold py-3 rounded-xl tracking-widest text-xs hover:bg-brandGreen transition-all">
                     EXPLORE SILVER <i class="fa-solid fa-arrow-right ml-2"></i>
                 </button>
             </div>
@@ -261,7 +261,7 @@
 
     <!-- VISIT SHOP & CUSTOM ORDERS -->
     <section id="factory" class="max-w-7xl mx-auto px-6 py-8 w-full">
-        <div class="bg-brandDark rounded-2xl p-8 text-white grid grid-cols-1 md:grid-cols-2 gap-8 border border-goldBase/30">
+        <div class="bg-brandDark rounded-2xl p-8 text-white grid grid-cols-1 md:grid-cols-2 gap-8 border border-goldBase/30 shadow-xl">
             <!-- SHOP VISIT -->
             <div class="flex flex-col justify-between space-y-4 md:border-r border-goldBase/20 md:pr-8">
                 <div>
@@ -378,9 +378,9 @@
     </div>
 
     <script>
-        const goldEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23FFD700' stroke='%23B8860B' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23D4AF37' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23D4AF37' stroke='%23FFD700' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%23052A1F'/><circle cx='50' cy='95' r='8' fill='%23FFD700'/></svg>";
+        const goldEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23FFD700' stroke='%23B8860B' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23D4AF37' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23D4AF37' stroke='%23FFD700' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%2303121D'/><circle cx='50' cy='95' r='8' fill='%23FFD700'/></svg>";
         const goldNecklaceSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><path d='M 30,20 Q 150,180 270,20' fill='none' stroke='%23D4AF37' stroke-width='14'/><path d='M 50,40 Q 150,190 250,40' fill='none' stroke='%23FAF2D3' stroke-width='6'/><circle cx='150' cy='125' r='18' fill='%23D4AF37'/></svg>";
-        const silverEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23E2E8F0' stroke='%2394A3B8' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23CBD5E1' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23CBD5E1' stroke='%23FFFFFF' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%23052A1F'/><circle cx='50' cy='95' r='8' fill='%23FFFFFF'/></svg>";
+        const silverEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23E2E8F0' stroke='%2394A3B8' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23CBD5E1' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23CBD5E1' stroke='%23FFFFFF' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%2303121D'/><circle cx='50' cy='95' r='8' fill='%23FFFFFF'/></svg>";
 
         const catalog = [
             { id: 'g1', title: 'Royal Heritage Jhumka', metal: 'gold', category: 'earring', price: '₹92,500', image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&q=80', tryable: true, overlay: goldEarringSVG },
@@ -420,8 +420,8 @@
         function filterCategory(cat, evt) {
             selectedCategory = cat;
             if(evt) {
-                document.querySelectorAll('button').forEach(b => b.classList.remove('text-goldDark'));
-                evt.target.classList.add('text-goldDark');
+                document.querySelectorAll('button').forEach(b => b.classList.remove('text-blue-900'));
+                evt.target.classList.add('text-blue-900');
             }
             renderCatalog();
         }
