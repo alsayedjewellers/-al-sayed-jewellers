@@ -6,17 +6,16 @@
     <title>Al Sayed Jewellers - Since 2026</title>
 
     <!-- Tailwind CSS -->
-    <script src="https://tailwindcomponents.com/tailwind-script-v2.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brandDark: '#03121D',      /* Emerald Blue Dark Foundation */
-                        brandGreen: '#06202E',     /* Rich Emerald-Blue Accent */
+                        brandDark: '#03121D',      
+                        brandGreen: '#06202E',     
                         brandCream: '#F4F7F6',
-                        brandCard: '#EAF0F2',      /* Soft Blue-Gray Cream Card Background */
+                        brandCard: '#EAF0F2',      
                         goldBase: '#D4AF37',
                         goldLight: '#F3E5AB',
                         goldDark: '#997A15'
@@ -50,7 +49,6 @@
     <!-- TOP NAVIGATION BAR -->
     <nav class="bg-brandDark border-b border-goldBase/30 px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <!-- LOGO -->
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full border border-goldBase flex items-center justify-center text-goldBase font-cinzel font-bold text-lg">
                     AS
@@ -61,7 +59,6 @@
                 </div>
             </div>
 
-            <!-- MENU LINKS -->
             <div class="flex flex-wrap justify-center gap-6 font-cinzel text-xs text-gray-300 font-semibold tracking-wider">
                 <a href="#" class="text-goldBase border-b border-goldBase pb-1">HOME</a>
                 <a href="#collections" class="hover:text-goldBase transition-colors">COLLECTIONS</a>
@@ -71,19 +68,18 @@
                 <a href="#contact" class="hover:text-goldBase transition-colors">CONTACT</a>
             </div>
 
-            <!-- SOCIAL ICONS -->
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/" target="_blank" class="w-9 h-9 rounded-full bg-brandGreen border border-goldBase/40 text-goldBase flex items-center justify-center hover:bg-goldBase hover:text-black transition-all">
+                <a href="https://wa.me/919876543210" target="_blank" class="w-9 h-9 rounded-full bg-brandGreen border border-goldBase/40 text-goldBase flex items-center justify-center hover:bg-goldBase hover:text-black transition-all">
                     <i class="fa-brands fa-whatsapp text-sm"></i>
                 </a>
-                <a href="https://instagram.com/" target="_blank" class="w-9 h-9 rounded-full bg-brandGreen border border-goldBase/40 text-goldBase flex items-center justify-center hover:bg-goldBase hover:text-black transition-all">
+                <a href="https://instagram.com/alsayedjewellers" target="_blank" class="w-9 h-9 rounded-full bg-brandGreen border border-goldBase/40 text-goldBase flex items-center justify-center hover:bg-goldBase hover:text-black transition-all">
                     <i class="fa-brands fa-instagram text-sm"></i>
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION (Emerald Blue Theme) -->
+    <!-- HERO SECTION -->
     <header class="relative bg-brandDark text-white py-16 px-6 overflow-hidden border-b border-goldBase/25 shadow-2xl">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div class="space-y-6">
@@ -107,7 +103,7 @@
         </div>
     </header>
 
-    <!-- EXPLORE OUR COLLECTIONS SECTION -->
+    <!-- EXPLORE COLLECTIONS -->
     <section id="collections" class="max-w-7xl mx-auto px-6 py-14 w-full">
         <div class="text-center mb-10">
             <h2 class="text-2xl md:text-3xl font-cinzel font-bold tracking-widest text-brandDark">
@@ -125,7 +121,6 @@
                             <h3 class="text-2xl font-cinzel font-bold text-goldBase tracking-wider">GOLD</h3>
                         </div>
                     </div>
-                    <!-- CATEGORY LINKS GRID -->
                     <div class="grid grid-cols-2 gap-4 text-xs font-cinzel font-semibold text-gray-800 mb-6 px-2">
                         <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-ring text-goldBase"></i> Rings
@@ -161,7 +156,6 @@
                             <h3 class="text-2xl font-cinzel font-bold text-gray-200 tracking-wider">SILVER</h3>
                         </div>
                     </div>
-                    <!-- CATEGORY LINKS GRID -->
                     <div class="grid grid-cols-2 gap-4 text-xs font-cinzel font-semibold text-gray-800 mb-6 px-2">
                         <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
                             <i class="fa-solid fa-ring text-blue-900"></i> Rings
@@ -186,7 +180,6 @@
             </div>
         </div>
 
-        <!-- LIVE CATALOGUE GRID -->
         <div class="mb-6 flex justify-between items-center border-b border-gray-300 pb-4">
             <h3 id="current-collection-title" class="font-cinzel font-bold text-lg text-brandDark">GOLD COLLECTION CATALOGUE</h3>
             <div class="flex gap-2 font-cinzel text-xs">
@@ -197,10 +190,9 @@
         <div id="jewel-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
     </section>
 
-    <!-- OFFERS, RATES & TIMINGS SECTION -->
+    <!-- RATES & TIMINGS -->
     <section id="rates" class="max-w-7xl mx-auto px-6 py-8 w-full">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- SPECIAL OFFER -->
             <div class="bg-brandDark rounded-2xl p-6 text-white border border-goldBase/30 flex flex-col justify-between text-center shadow-xl">
                 <div>
                     <p class="text-xs font-cinzel tracking-widest text-goldBase uppercase mb-2">Special Offer</p>
@@ -212,7 +204,6 @@
                 <p class="text-[11px] text-gray-400 font-light">*Making charges may vary depending on design and product.</p>
             </div>
 
-            <!-- TODAY'S GOLD RATE BOARD -->
             <div class="bg-brandCard rounded-2xl p-6 border border-goldBase/30 shadow-xl flex flex-col justify-between">
                 <div class="text-center mb-4">
                     <p class="text-xs font-cinzel font-bold tracking-widest text-brandDark uppercase">✦ TODAY'S GOLD RATE ✦</p>
@@ -239,10 +230,9 @@
                         <p class="text-[10px] text-red-600 font-semibold">▼ 0.50</p>
                     </div>
                 </div>
-                <p class="text-[10px] text-center text-gray-500 mt-4">Last updated: 18 May 2026, 12:30 PM ⟳</p>
+                <p class="text-[10px] text-center text-gray-500 mt-4">Last updated: Today ⟳</p>
             </div>
 
-            <!-- SHOP TIMINGS -->
             <div class="bg-brandDark rounded-2xl p-6 text-white border border-goldBase/30 flex flex-col justify-between text-center shadow-xl">
                 <div>
                     <div class="flex justify-center mb-2">
@@ -259,10 +249,9 @@
         </div>
     </section>
 
-    <!-- VISIT SHOP & CUSTOM ORDERS -->
+    <!-- VISIT SHOP & FACTORY -->
     <section id="factory" class="max-w-7xl mx-auto px-6 py-8 w-full">
         <div class="bg-brandDark rounded-2xl p-8 text-white grid grid-cols-1 md:grid-cols-2 gap-8 border border-goldBase/30 shadow-xl">
-            <!-- SHOP VISIT -->
             <div class="flex flex-col justify-between space-y-4 md:border-r border-goldBase/20 md:pr-8">
                 <div>
                     <div class="flex items-center gap-3 mb-3">
@@ -270,7 +259,7 @@
                         <h3 class="font-cinzel font-bold text-lg text-goldBase">VISIT OUR SHOP</h3>
                     </div>
                     <p class="text-xs text-gray-300 leading-relaxed">
-                        Experience Al Sayed Jewellers in person. Explore our exclusive collections, compare designs and receive personalised assistance at our showroom.
+                        Shop No. 123, Gold Market, Karol Bagh, New Delhi - 110005. Experience Al Sayed Jewellers in person.
                     </p>
                 </div>
                 <div>
@@ -280,7 +269,6 @@
                 </div>
             </div>
 
-            <!-- MANUFACTURING -->
             <div class="flex flex-col justify-between space-y-4">
                 <div>
                     <div class="flex items-center gap-3 mb-3">
@@ -300,7 +288,7 @@
         </div>
     </section>
 
-    <!-- TRUST BADGES BAR -->
+    <!-- TRUST BADGES -->
     <section class="bg-brandCard border-y border-goldBase/20 py-6 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div class="flex flex-col items-center gap-1">
@@ -326,24 +314,41 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER WITH LOCATION, WHATSAPP, INSTAGRAM -->
     <footer id="contact" class="bg-brandDark text-white py-12 px-6 border-t border-goldBase/30 text-center">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <p class="text-xs font-cinzel text-goldBase font-bold uppercase">CALL US</p>
-                <a href="tel:+919876543210" class="text-sm font-cinzel font-semibold hover:text-goldBase">+91 98765 43210</a>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Address Section -->
+            <div class="flex flex-col items-center md:items-start gap-3">
+                <p class="text-xs font-cinzel text-goldBase font-bold uppercase tracking-widest">Visit Us</p>
+                <p class="text-sm font-sans text-gray-300 leading-relaxed text-center md:text-left">
+                    Shop No. 123, Gold Market,<br>
+                    Karol Bagh, New Delhi - 110005
+                </p>
             </div>
+
+            <!-- Phone Section -->
             <div class="flex flex-col items-center gap-2">
-                <p class="text-xs font-cinzel text-goldBase font-bold uppercase">WHATSAPP US</p>
-                <a href="https://wa.me/919876543210" target="_blank" class="text-sm font-cinzel font-semibold hover:text-goldBase">+91 98765 43210</a>
+                <p class="text-xs font-cinzel text-goldBase font-bold uppercase tracking-widest">Call Us</p>
+                <a href="tel:+919876543210" class="text-sm font-cinzel font-semibold hover:text-goldBase transition-colors">+91 98765 43210</a>
             </div>
+
+            <!-- WhatsApp Section -->
+            <div class="flex flex-col items-center gap-2">
+                <p class="text-xs font-cinzel text-goldBase font-bold uppercase tracking-widest">WhatsApp</p>
+                <a href="https://wa.me/919876543210?text=Hi, I want to inquire about jewellery" target="_blank" class="text-sm font-cinzel font-semibold hover:text-green-400 transition-colors">+91 98765 43210</a>
+            </div>
+
+            <!-- Instagram Section -->
             <div class="flex flex-col items-center md:items-end gap-2">
-                <p class="text-xs font-cinzel text-goldBase font-bold uppercase">FOLLOW US</p>
-                <a href="https://instagram.com/alsayedjewellers" target="_blank" class="text-sm font-cinzel font-semibold hover:text-goldBase">@alsayedjewellers</a>
+                <p class="text-xs font-cinzel text-goldBase font-bold uppercase tracking-widest">Follow Us</p>
+                <a href="https://instagram.com/alsayedjewellers" target="_blank" class="text-sm font-cinzel font-semibold hover:text-pink-400 transition-colors">@alsayedjewellers</a>
             </div>
         </div>
-        <div class="mt-8 pt-6 border-t border-goldBase/20 text-xs text-gray-400 font-cinzel">
-            <p>© 2026 Al Sayed Jewellers — All Rights Reserved. Crafted in Delhi.</p>
+
+        <!-- Copyright -->
+        <div class="mt-12 pt-6 border-t border-goldBase/20 text-xs text-gray-400 font-cinzel tracking-wider">
+            <p>© 2026 Al Sayed Jewellers — All Rights Reserved. Proudly Crafted in Delhi.</p>
         </div>
     </footer>
 
@@ -368,7 +373,6 @@
             <video id="webcam" class="hidden" playsinline muted></video>
             <canvas id="output_canvas" class="max-w-full max-h-full object-contain rounded-2xl"></canvas>
 
-            <!-- CAPTURE BUTTON OVERLAY -->
             <div class="absolute bottom-8 z-30 flex justify-center w-full">
                 <button onclick="capturePhoto()" class="bg-goldBase text-black font-cinzel font-bold text-xs px-8 py-3.5 rounded-full flex items-center gap-3 border border-white/40 shadow-xl hover:bg-goldLight transition-all">
                     <i class="fa-solid fa-camera text-sm"></i> CAPTURE & DOWNLOAD PHOTO
@@ -377,6 +381,7 @@
         </div>
     </div>
 
+    <!-- JAVASCRIPT LOGIC -->
     <script>
         const goldEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23FFD700' stroke='%23B8860B' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23D4AF37' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23D4AF37' stroke='%23FFD700' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%2303121D'/><circle cx='50' cy='95' r='8' fill='%23FFD700'/></svg>";
         const goldNecklaceSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><path d='M 30,20 Q 150,180 270,20' fill='none' stroke='%23D4AF37' stroke-width='14'/><path d='M 50,40 Q 150,190 250,40' fill='none' stroke='%23FAF2D3' stroke-width='6'/><circle cx='150' cy='125' r='18' fill='%23D4AF37'/></svg>";
@@ -420,22 +425,22 @@
         function filterCategory(cat, evt) {
             selectedCategory = cat;
             if(evt) {
-                document.querySelectorAll('button').forEach(b => b.classList.remove('text-blue-900'));
-                evt.target.classList.add('text-blue-900');
+                document.querySelectorAll('#collections button').forEach(b => b.classList.remove('text-blue-900'));
+                evt.currentTarget.classList.add('text-blue-900');
             }
             renderCatalog();
         }
 
         function renderCatalog() {
             const grid = document.getElementById('jewel-grid');
+            if(!grid) return;
             grid.innerHTML = '';
 
             const filtered = catalog.filter(item => item.metal === selectedMetal && (selectedCategory === 'all' || item.category === selectedCategory));
 
             if(filtered.length === 0) {
                 grid.innerHTML = `<div class="col-span-4 text-center py-10 text-gray-500 font-cinzel">No pieces found in this category. Showing all ${selectedMetal} collection.</div>`;
-                const fallback = catalog.filter(item => item.metal === selectedMetal);
-                fallback.forEach(item => appendCard(item, grid));
+                catalog.filter(item => item.metal === selectedMetal).forEach(item => appendCard(item, grid));
                 return;
             }
 
@@ -478,12 +483,16 @@
             overlayImg.src = item.overlay;
 
             document.getElementById('arModal').classList.remove('hidden');
+            document.getElementById('ai-loading').classList.remove('hidden');
             initAI();
         }
 
         function closeTryOnModal() {
             document.getElementById('arModal').classList.add('hidden');
-            if (cameraInstance) { cameraInstance.stop(); cameraInstance = null; }
+            if (cameraInstance) { 
+                cameraInstance.stop(); 
+                cameraInstance = null; 
+            }
         }
 
         async function initAI() {
@@ -495,11 +504,12 @@
                 faceMeshInstance = new FaceMesh({
                     locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`
                 });
-                faceMeshInstance.setOptions({ maxNumFaces: 1, refineLandmarks: true });
+                faceMeshInstance.setOptions({ maxNumFaces: 1, refineLandmarks: true, minDetectionConfidence: 0.5, minTrackingConfidence: 0.5 });
+                
                 faceMeshInstance.onResults((results) => {
                     if (!results.image) return;
-                    canvasElement.width = results.image.width;
-                    canvasElement.height = results.image.height;
+                    canvasElement.width = videoElement.videoWidth || 1280;
+                    canvasElement.height = videoElement.videoHeight || 720;
 
                     canvasCtx.save();
                     canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
@@ -536,15 +546,24 @@
             try {
                 if (!cameraInstance) {
                     cameraInstance = new Camera(videoElement, {
-                        onFrame: async () => { await faceMeshInstance.send({ image: videoElement }); },
-                        width: 1280, height: 720
+                        onFrame: async () => { 
+                            if(videoElement) {
+                                await faceMeshInstance.send({ image: videoElement }); 
+                            }
+                        },
+                        width: 1280, 
+                        height: 720
                     });
                 }
                 await cameraInstance.start();
                 document.getElementById('ai-loading').classList.add('hidden');
                 document.getElementById('cam-status').className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
             } catch (e) {
-                document.getElementById('ai-loading').innerHTML = `<p class="text-xs text-red-400">Camera Access Required.</p>`;
+                console.error(e);
+                const loadingEl = document.getElementById('ai-loading');
+                if(loadingEl) {
+                    loadingEl.innerHTML = `<p class="text-xs text-red-400">Camera Access Denied or Unavailable.</p>`;
+                }
             }
         }
 
