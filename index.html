@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Al Sayed Jewellers | Royal Fine Jewellery</title>
   
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -39,6 +40,7 @@
       font-family: 'Cinzel', serif;
     }
 
+    /* TOP ANNOUNCEMENT BAR */
     .top-bar {
       background: linear-gradient(90deg, #020b07, #0a2e20, #020b07);
       text-align: center;
@@ -50,6 +52,7 @@
       text-transform: uppercase;
     }
 
+    /* HEADER */
     header {
       background: rgba(7, 34, 24, 0.98);
       backdrop-filter: blur(10px);
@@ -122,10 +125,11 @@
       box-shadow: 0 0 10px var(--gold-primary);
     }
 
+    /* HERO SECTION */
     .hero {
       background: linear-gradient(rgba(3, 15, 10, 0.85), rgba(3, 15, 10, 0.85)), 
                   url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600') center/cover;
-      min-height: 65vh;
+      min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -136,7 +140,7 @@
     }
 
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 400;
       line-height: 1.25;
       letter-spacing: 2px;
@@ -153,13 +157,13 @@
 
     .hero p {
       margin: 18px 0 28px;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--gold-light);
       font-weight: 300;
       letter-spacing: 1.5px;
     }
 
-    /* SHINING GOLD BUTTON EFFECT */
+    /* CONTINUOUS SHINE BUTTON EFFECT */
     .btn-royal {
       background: var(--gold-gradient);
       color: #000;
@@ -175,36 +179,42 @@
       text-decoration: none;
       border-radius: 3px;
       box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
       z-index: 1;
     }
 
-    .btn-royal::after {
+    .btn-royal::before {
       content: '';
       position: absolute;
       top: 0;
       left: -100%;
-      width: 100%;
+      width: 70%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-      transition: 0.5s;
-      animation: shine 2.5s infinite;
+      background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.85) 50%, 
+        transparent 100%
+      );
+      transform: skewX(-25deg);
+      animation: continuousShine 3s infinite ease-in-out;
       z-index: 2;
     }
 
-    @keyframes shine {
+    @keyframes continuousShine {
       0% { left: -100%; }
-      20% { left: 100%; }
-      100% { left: 100%; }
+      35% { left: 150%; }
+      100% { left: 150%; }
     }
 
     .btn-royal:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.7);
     }
 
+    /* MAIN CONTAINER */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -227,6 +237,7 @@
       margin-top: 8px;
     }
 
+    /* BULLION RATE SECTION */
     .rate-box {
       background: var(--card-bg);
       border: 1px solid rgba(212, 175, 55, 0.35);
@@ -299,7 +310,6 @@
     }
 
     .up { color: #4CAF50; }
-    .down { color: #F44336; }
 
     .last-update {
       font-size: 0.65rem;
@@ -307,10 +317,11 @@
       margin-top: 15px;
     }
 
+    /* TABS & GALLERY */
     .tab-buttons {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
       margin-bottom: 30px;
     }
 
@@ -318,8 +329,8 @@
       background: var(--card-bg);
       color: var(--gold-light);
       border: 1px solid var(--gold-primary);
-      padding: 14px 40px;
-      font-size: 1.1rem;
+      padding: 12px 35px;
+      font-size: 1rem;
       font-weight: 700;
       letter-spacing: 2px;
       cursor: pointer;
@@ -395,6 +406,7 @@
       margin-bottom: 12px;
     }
 
+    /* DUAL BANNER */
     .dual-banner {
       background: var(--card-bg);
       border: 1px solid rgba(212, 175, 55, 0.3);
@@ -413,7 +425,7 @@
     }
 
     .banner-col i {
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: var(--gold-primary);
     }
 
@@ -430,6 +442,7 @@
       margin-bottom: 15px;
     }
 
+    /* FOOTER */
     footer {
       background: #020b07;
       border-top: 1px solid rgba(212, 175, 55, 0.3);
@@ -450,7 +463,7 @@
     }
 
     .footer-col i {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--gold-primary);
       border: 1px solid rgba(212, 175, 55, 0.3);
       padding: 10px;
@@ -475,18 +488,19 @@
         grid-template-columns: 1fr;
         flex-direction: column;
       }
-      .tab-buttons { flex-direction: row; }
-      .tab-btn { width: 50%; padding: 12px 10px; font-size: 0.95rem; }
-      .hero h2 { font-size: 1.8rem; }
+      .hero h2 { font-size: 1.7rem; }
+      .tab-btn { padding: 10px 25px; }
     }
   </style>
 </head>
 <body>
 
+  <!-- TOP BAR -->
   <div class="top-bar">
     ❖ Certified Hallmark Gold & Silver Jewellery • Custom Manufacturing Facility ❖
   </div>
 
+  <!-- HEADER -->
   <header>
     <a href="#" class="brand-logo">
       <i class="fa-solid fa-crown"></i>
@@ -506,6 +520,7 @@
     </div>
   </header>
 
+  <!-- HERO SECTION WITH SHINING BUTTON -->
   <section class="hero">
     <h2>Timeless Royalty.<br><span>Crafted With Perfection.</span></h2>
     <p>Exclusive Gold & Silver Fine Jewellery</p>
@@ -516,6 +531,7 @@
 
   <div class="container">
 
+    <!-- BULLION RATES -->
     <div class="rate-box">
       <div class="rate-header">
         <h3 class="serif" style="color: var(--gold-light); letter-spacing: 2px;">TODAY'S BULLION RATE (DELHI)</h3>
@@ -550,10 +566,11 @@
       </div>
 
       <div class="last-update" id="update-timestamp">
-        * Rates updated according to Delhi Bullion Market today.
+        * Delhi Bullion Market rates.
       </div>
     </div>
 
+    <!-- COLLECTIONS TABS -->
     <h2 class="section-title">OUR COLLECTIONS</h2>
 
     <div class="tab-buttons">
@@ -561,6 +578,7 @@
       <button class="tab-btn" onclick="switchTab('silver')">SILVER</button>
     </div>
 
+    <!-- GOLD TAB -->
     <div id="gold-tab" class="tab-content active">
       <div class="gallery-grid">
         <div class="gallery-item">
@@ -598,18 +616,10 @@
             <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Necklaces" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
-
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1611591475140-438856db0cd1?auto=format&fit=crop&q=80&w=500');"></div>
-          <div class="gallery-details">
-            <h4>Gold Pendants</h4>
-            <span>Lightweight & Fancy Pendants</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Gold%20Pendants" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
-          </div>
-        </div>
       </div>
     </div>
 
+    <!-- SILVER TAB -->
     <div id="silver-tab" class="tab-content">
       <div class="gallery-grid">
         <div class="gallery-item">
@@ -629,27 +639,10 @@
             <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Bracelets" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
           </div>
         </div>
-
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=500');"></div>
-          <div class="gallery-details">
-            <h4>Silver Chains</h4>
-            <span>Italian & Italian Cut Chains</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20Silver%20Chains" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
-          </div>
-        </div>
-
-        <div class="gallery-item">
-          <div class="gallery-thumb" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=500');"></div>
-          <div class="gallery-details">
-            <h4>High Polish Sets</h4>
-            <span>Mirror Polish Ornaments</span>
-            <a href="https://wa.me/918826836771?text=Hi,%20I%20am%20interested%20in%20High%20Polish%20Silver%20Sets" target="_blank" class="btn-royal" style="padding: 8px 16px; font-size:0.7rem;">ENQUIRE NOW</a>
-          </div>
-        </div>
       </div>
     </div>
 
+    <!-- DUAL BANNER -->
     <div class="dual-banner">
       <div class="banner-col">
         <i class="fa-solid fa-store"></i>
@@ -671,6 +664,7 @@
 
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <a href="tel:8826836771" class="footer-col">
       <i class="fa-solid fa-phone"></i>
