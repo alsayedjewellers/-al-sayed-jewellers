@@ -3,99 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Sayed Jewellers | Premium Emerald Collection</title>
+    <title>Al Sayed Jewellers | Luxury Defined</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #022619; color: #e2e8f0; }
-        .emerald-bg { background-color: #022619; }
-        .gold-text { color: #D4AF37; }
-        .gold-border { border-color: #D4AF37; }
-        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.3); }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfbf7; color: #2d3748; }
+        .lux-black { background-color: #1a1a1a; }
+        .lux-gold { color: #c5a059; }
+        .bg-lux-gold { background-color: #c5a059; }
         .font-cinzel { font-family: 'Cinzel', serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        
+        .hero-section { 
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), 
+            url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=2000'); 
+            background-size: cover; background-position: center; 
+        }
     </style>
 </head>
 <body>
 
     <!-- NAV -->
-    <nav class="p-6 flex justify-between items-center border-b border-gold-border/30">
-        <h1 class="text-2xl font-cinzel text-gold-text tracking-widest">AL SAYED</h1>
-        <div class="flex gap-6">
-            <a href="#rates" class="text-xs uppercase tracking-widest hover:text-gold-text">Market Rates</a>
-            <a href="#catalogue" class="text-xs uppercase tracking-widest hover:text-gold-text">Catalogue</a>
+    <nav class="flex justify-between items-center px-10 py-6 bg-white border-b border-gray-100">
+        <div class="font-cinzel text-xl tracking-[0.2em] font-bold">AL SAYED</div>
+        <div class="space-x-8 text-xs font-semibold uppercase tracking-widest text-gray-500">
+            <a href="#" class="hover:text-black">Home</a>
+            <a href="#collections" class="hover:text-black">Collections</a>
+            <a href="#rates" class="hover:text-black">Live Rates</a>
         </div>
     </nav>
 
     <!-- HERO -->
-    <header class="py-20 text-center">
-        <h2 class="text-5xl font-cinzel text-white">Elegance in Emerald</h2>
-        <p class="mt-4 text-gray-400">Discover our handcrafted gold and silver masterpieces.</p>
+    <header class="hero-section h-[70vh] flex flex-col justify-center items-center text-white text-center px-6">
+        <h1 class="text-6xl font-playfair italic font-bold">Timeless Elegance.</h1>
+        <p class="mt-4 font-cinzel text-lg tracking-widest text-gray-300">CRAFTED WITH TRUST SINCE 1998</p>
+        <button class="mt-10 px-10 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition">Visit Our Showroom</button>
     </header>
 
-    <!-- LIVE RATES SECTION -->
-    <section id="rates" class="max-w-4xl mx-auto px-6 mb-20">
-        <div class="glass-card p-8 rounded-2xl">
-            <h3 class="text-center font-cinzel text-gold-text mb-6">LIVE DELHI RATES</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-4 bg-black/20 rounded-xl text-center"><p class="text-[10px] text-gray-400">24K Gold</p><p id="rate-24k" class="font-bold text-gold-text">---</p></div>
-                <div class="p-4 bg-black/20 rounded-xl text-center"><p class="text-[10px] text-gray-400">22K Gold</p><p id="rate-22k" class="font-bold text-gold-text">---</p></div>
-                <div class="p-4 bg-black/20 rounded-xl text-center"><p class="text-[10px] text-gray-400">18K Gold</p><p id="rate-18k" class="font-bold text-gold-text">---</p></div>
-                <div class="p-4 bg-black/20 rounded-xl text-center"><p class="text-[10px] text-gray-400">Silver</p><p id="rate-silver" class="font-bold text-gold-text">---</p></div>
+    <!-- COLLECTIONS SECTION -->
+    <section id="collections" class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-cinzel text-center mb-16">Explore Our Collections</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- GOLD CARD -->
+            <div class="group relative overflow-hidden bg-gray-100">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e" class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute bottom-10 left-10 text-white">
+                    <h3 class="text-3xl font-cinzel">Gold Jewellery</h3>
+                    <button class="mt-4 px-6 py-2 border border-white hover:bg-white hover:text-black transition">Explore Gold</button>
+                </div>
+            </div>
+            <!-- SILVER CARD -->
+            <div class="group relative overflow-hidden bg-gray-100">
+                <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236" class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-105">
+                <div class="absolute bottom-10 left-10 text-white">
+                    <h3 class="text-3xl font-cinzel">Silver Collection</h3>
+                    <button class="mt-4 px-6 py-2 border border-white hover:bg-white hover:text-black transition">Explore Silver</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CATALOGUE SECTION -->
-    <section id="catalogue" class="max-w-7xl mx-auto px-6 py-10">
-        <div class="flex justify-center gap-4 mb-10">
-            <button onclick="filter('gold')" class="px-6 py-2 border border-gold-border text-gold-text rounded-full hover:bg-gold-text hover:text-black transition">GOLD COLLECTION</button>
-            <button onclick="filter('silver')" class="px-6 py-2 border border-gold-border text-gold-text rounded-full hover:bg-gold-text hover:text-black transition">SILVER COLLECTION</button>
-        </div>
-        <div id="jewel-grid" class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <!-- Items injected by JS -->
+    <!-- RATE SECTION -->
+    <section id="rates" class="bg-gray-50 py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <h3 class="font-cinzel text-2xl text-center mb-10">Live Market Rates</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
+                    <p class="text-xs text-gray-400">24K Gold</p>
+                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-24k">₹7,230</p>
+                </div>
+                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
+                    <p class="text-xs text-gray-400">22K Gold</p>
+                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-22k">₹6,630</p>
+                </div>
+                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
+                    <p class="text-xs text-gray-400">18K Gold</p>
+                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-18k">₹5,420</p>
+                </div>
+                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
+                    <p class="text-xs text-gray-400">Silver</p>
+                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-silver">₹89.50</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- AI MODAL -->
-    <div id="arModal" class="fixed inset-0 z-50 hidden bg-black flex flex-col items-center justify-center">
-        <button onclick="closeModal()" class="absolute top-10 right-10 text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
-        <canvas id="output_canvas" class="w-full max-w-2xl"></canvas>
-    </div>
+    <footer class="lux-black text-white py-10 text-center text-sm">
+        <p>&copy; 2026 Al Sayed Jewellers. All Rights Reserved.</p>
+    </footer>
 
-    <script>
-        const catalog = [
-            { id: 'g1', title: 'Heritage Jhumka', metal: 'gold', price: '₹92,500', img: 'https://images.unsplash.com/photo-1630019852942-f89202989a59' },
-            { id: 's1', title: 'Lotus Earrings', metal: 'silver', price: '₹4,800', img: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908' }
-        ];
-
-        function render(metal = 'gold') {
-            const grid = document.getElementById('jewel-grid');
-            grid.innerHTML = catalog.filter(i => i.metal === metal).map(item => `
-                <div class="glass-card p-4 rounded-2xl hover:scale-105 transition">
-                    <img src="${item.img}" class="rounded-xl h-60 w-full object-cover">
-                    <h4 class="mt-4 font-bold text-white">${item.title}</h4>
-                    <p class="text-gold-text">${item.price}</p>
-                    <button onclick="openModal('${item.id}')" class="mt-4 w-full bg-gold-text text-black py-2 rounded-lg font-bold">Try AI</button>
-                </div>
-            `).join('');
-        }
-
-        function filter(metal) { render(metal); }
-        function openModal(id) { document.getElementById('arModal').classList.remove('hidden'); }
-        function closeModal() { document.getElementById('arModal').classList.add('hidden'); }
-
-        // Fetch Mock Rates
-        window.onload = () => {
-            render('gold');
-            document.getElementById('rate-24k').innerText = '₹1,55,810';
-            document.getElementById('rate-22k').innerText = '₹1,42,850';
-            document.getElementById('rate-18k').innerText = '₹1,16,910';
-            document.getElementById('rate-silver').innerText = '₹96,500';
-        };
-    </script>
 </body>
 </html>
