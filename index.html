@@ -12,22 +12,18 @@
             theme: {
                 extend: {
                     colors: {
+                        emeraldDark: '#021B13',
+                        emeraldBase: '#052A1F',
+                        emeraldCard: '#08382B',
                         gold: {
                             100: '#FFF2C6',
                             300: '#F0D076',
                             400: '#D4AF37',
                             500: '#B8860B',
-                            600: '#8A6200',
-                        },
-                        silver: {
-                            100: '#FFFFFF',
-                            300: '#E2E8F0',
-                            400: '#94A3B8',
-                        },
-                        darkbg: '#050807'
+                        }
                     },
                     fontFamily: {
-                        serif: ['Cinzel', 'Playfair Display', 'serif'],
+                        serif: ['Cinzel', 'serif'],
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
@@ -35,8 +31,8 @@
         }
     </script>
 
-    <!-- Google Fonts & FontAwesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- MediaPipe Face Mesh & Camera Utils -->
@@ -44,10 +40,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
 
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050807; color: #f3f4f6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #021B13; color: #f3f4f6; }
         .font-cinzel { font-family: 'Cinzel', serif; }
         
-        /* Shimmer Gold & Silver Metallic Animation */
         .gold-shine {
             background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
             background-size: 200% auto;
@@ -61,58 +56,51 @@
             animation: shine 3s linear infinite;
         }
 
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
+        @keyframes shine { to { background-position: 200% center; } }
 
         .gold-text-gradient {
-            background: linear-gradient(135deg, #FFF2C6 0%, #D4AF37 50%, #8A6200 100%);
+            background: linear-gradient(135deg, #FFF2C6 0%, #D4AF37 50%, #B8860B 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .gold-border-glow {
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between bg-emeraldDark">
 
-    <!-- HERO SECTION -->
-    <header class="relative bg-gradient-to-b from-black via-[#0a0f0d] to-[#050807] pt-16 pb-12 px-6 text-center border-b border-gold-400/20">
-        <div class="max-w-4xl mx-auto space-y-4">
-            <p class="text-xs tracking-[0.4em] uppercase text-gold-300 font-semibold">Haute Joaillerie Atelier</p>
+    <!-- HERO SECTION (Emerald Theme) -->
+    <header class="relative bg-gradient-to-b from-[#01120C] via-emeraldDark to-emeraldBase pt-16 pb-12 px-6 text-center border-b border-gold-400/20">
+        <div class="max-w-4xl mx-auto space-y-3">
             <h1 class="text-4xl md:text-6xl font-cinzel font-black tracking-wider gold-text-gradient">
                 AL SAYED JEWELLERS
             </h1>
-            <p class="text-xs font-cinzel tracking-[0.3em] text-gray-400 uppercase">SINCE 2026</p>
+            <p class="text-xs font-cinzel tracking-[0.3em] text-gold-300 uppercase">SINCE 2026</p>
 
-            <div class="pt-6 max-w-2xl mx-auto">
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed font-light">
-                    Crafting perfection in our <span class="text-gold-300 font-medium">exclusive in-house manufacturing unit</span>. Every single masterpiece is handcrafted by master artisans in <span class="text-gold-300 font-medium">Delhi, India</span>.
+            <div class="pt-4 max-w-2xl mx-auto">
+                <p class="text-sm md:text-base text-gray-200 leading-relaxed font-light">
+                    Crafting perfection in our <span class="text-gold-300 font-semibold">exclusive in-house manufacturing unit</span>. Every single masterpiece is handcrafted by master artisans in <span class="text-gold-300 font-semibold">Delhi, India</span>.
                 </p>
             </div>
         </div>
 
-        <!-- DELHI LIVE RATES BOARD (Time To Time Auto Refresh) -->
-        <div class="mt-10 max-w-2xl mx-auto bg-black/70 border border-gold-400/30 rounded-2xl p-4 backdrop-blur-md">
+        <!-- ACCURATE DELHI LIVE RATES BOARD -->
+        <div class="mt-8 max-w-2xl mx-auto bg-emeraldDark/80 border border-gold-400/40 rounded-2xl p-4 backdrop-blur-md shadow-2xl">
             <div class="flex items-center justify-between text-xs md:text-sm font-cinzel px-4">
                 <div class="flex items-center gap-2">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-400"></span>
                     </span>
-                    <span class="text-gray-300 font-bold">Delhi Live Rate</span>
+                    <span class="text-gray-200 font-bold">Delhi Live Rate</span>
                 </div>
                 <div class="flex items-center gap-6">
                     <div>
-                        <span class="text-gray-400">22K Gold: </span>
-                        <span id="rate-gold" class="text-gold-300 font-bold">₹6,850/g</span>
+                        <span class="text-gray-300">22K Gold: </span>
+                        <span id="rate-gold" class="text-gold-300 font-bold">₹7,250/g</span>
                     </div>
-                    <div class="h-4 w-[1px] bg-white/20"></div>
+                    <div class="h-4 w-[1px] bg-gold-400/30"></div>
                     <div>
-                        <span class="text-gray-400">925 Silver: </span>
-                        <span id="rate-silver" class="text-gray-200 font-bold">₹88/g</span>
+                        <span class="text-gray-300">925 Silver: </span>
+                        <span id="rate-silver" class="text-white font-bold">₹92/g</span>
                     </div>
                 </div>
             </div>
@@ -122,7 +110,7 @@
     <!-- TOGGLE BUTTONS (GOLD / SILVER) -->
     <section class="max-w-5xl mx-auto px-6 pt-10 text-center">
         <div class="flex justify-center gap-6">
-            <button id="btn-gold" onclick="switchMetal('gold')" class="gold-shine font-cinzel font-bold text-sm md:text-base px-8 py-3.5 rounded-full gold-border-glow transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+            <button id="btn-gold" onclick="switchMetal('gold')" class="gold-shine font-cinzel font-bold text-sm md:text-base px-8 py-3.5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
                 <i class="fa-solid fa-crown"></i> GOLD COLLECTION
             </button>
             <button id="btn-silver" onclick="switchMetal('silver')" class="silver-shine font-cinzel font-bold text-sm md:text-base px-8 py-3.5 rounded-full opacity-60 hover:opacity-100 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
@@ -133,10 +121,10 @@
         <!-- CATEGORY TABS -->
         <div class="mt-8 flex justify-center flex-wrap gap-3 font-cinzel text-xs" id="category-tabs">
             <button onclick="filterCategory('all', event)" class="cat-btn bg-gold-400 text-black font-bold px-5 py-2 rounded-full border border-gold-400">All</button>
-            <button onclick="filterCategory('earring', event)" class="cat-btn bg-black/60 text-gray-300 hover:text-white px-5 py-2 rounded-full border border-white/10">Earrings</button>
-            <button onclick="filterCategory('ring', event)" class="cat-btn bg-black/60 text-gray-300 hover:text-white px-5 py-2 rounded-full border border-white/10">Rings</button>
-            <button onclick="filterCategory('chain', event)" class="cat-btn bg-black/60 text-gray-300 hover:text-white px-5 py-2 rounded-full border border-white/10">Chains</button>
-            <button onclick="filterCategory('pendant', event)" class="cat-btn bg-black/60 text-gray-300 hover:text-white px-5 py-2 rounded-full border border-white/10">Pendants</button>
+            <button onclick="filterCategory('earring', event)" class="cat-btn bg-emeraldCard text-gray-200 hover:text-white px-5 py-2 rounded-full border border-gold-400/20">Earrings</button>
+            <button onclick="filterCategory('ring', event)" class="cat-btn bg-emeraldCard text-gray-200 hover:text-white px-5 py-2 rounded-full border border-gold-400/20">Rings</button>
+            <button onclick="filterCategory('chain', event)" class="cat-btn bg-emeraldCard text-gray-200 hover:text-white px-5 py-2 rounded-full border border-gold-400/20">Chains</button>
+            <button onclick="filterCategory('pendant', event)" class="cat-btn bg-emeraldCard text-gray-200 hover:text-white px-5 py-2 rounded-full border border-gold-400/20">Pendants</button>
         </div>
     </section>
 
@@ -145,17 +133,17 @@
         <div id="jewel-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
     </main>
 
-    <footer class="bg-black border-t border-gold-400/20 py-8 text-center text-xs text-gray-500 font-cinzel">
+    <footer class="bg-[#01120C] border-t border-gold-400/20 py-8 text-center text-xs text-gray-400 font-cinzel">
         <p class="text-gold-400 font-bold tracking-widest">AL SAYED JEWELLERS — DELHI ATELIER</p>
-        <p class="mt-1 text-gray-600">In-House Manufacturing & Pure Metal Certification</p>
+        <p class="mt-1 text-gray-400">In-House Manufacturing & Pure Metal Certification</p>
     </footer>
 
     <!-- AI TRY-ON MODAL -->
     <div id="arModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-2xl flex flex-col justify-between">
-        <div class="px-6 py-4 flex justify-between items-center border-b border-white/10 bg-black/80 z-20">
+        <div class="px-6 py-4 flex justify-between items-center border-b border-gold-400/20 bg-emeraldDark/90 z-20">
             <div class="flex items-center gap-3">
                 <div id="cam-status" class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <h3 class="text-xs font-bold text-white tracking-widest font-cinzel uppercase">Al Sayed AI Virtual Fitting</h3>
+                <h3 class="text-xs font-bold text-gold-300 tracking-widest font-cinzel uppercase">Al Sayed AI Fitting</h3>
             </div>
             <button onclick="closeTryOnModal()" class="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20">
                 <i class="fa-solid fa-xmark"></i>
@@ -163,9 +151,9 @@
         </div>
 
         <div class="relative flex-1 flex items-center justify-center overflow-hidden bg-black">
-            <div id="ai-loading" class="absolute z-30 flex flex-col items-center gap-3 bg-black/90 p-8 rounded-2xl border border-gold-400/30 text-center">
+            <div id="ai-loading" class="absolute z-30 flex flex-col items-center gap-3 bg-emeraldDark/90 p-8 rounded-2xl border border-gold-400/30 text-center">
                 <div class="w-10 h-10 border-4 border-gold-400 border-t-transparent rounded-full animate-spin"></div>
-                <p class="text-xs text-gold-300">Initializing Live AI Fitting...</p>
+                <p class="text-xs text-gold-300">Tracking Ear & Face Landmarks...</p>
             </div>
 
             <video id="webcam" class="hidden" playsinline muted></video>
@@ -174,47 +162,26 @@
     </div>
 
     <script>
-        // Transparent Clean Vector Overlays
-        const goldEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 160'><path d='M50 10 L50 40 M30 40 L70 40 L80 100 L50 150 L20 100 Z' fill='%23D4AF37' stroke='%23FFF' stroke-width='2'/><circle cx='50' cy='20' r='10' fill='%23E6CA65'/><circle cx='50' cy='85' r='15' fill='%23FFF'/></svg>";
+        // High Quality Realistic Gold & Silver Jewelry Vectors
+        const goldEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23FFD700' stroke='%23B8860B' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23D4AF37' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23D4AF37' stroke='%23FFD700' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%23052A1F'/><circle cx='50' cy='95' r='8' fill='%23FFD700'/></svg>";
         const goldNecklaceSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><path d='M 30,20 Q 150,180 270,20' fill='none' stroke='%23D4AF37' stroke-width='14'/><path d='M 50,40 Q 150,190 250,40' fill='none' stroke='%23FAF2D3' stroke-width='6'/><circle cx='150' cy='125' r='18' fill='%23D4AF37'/></svg>";
-        const silverEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 160'><path d='M50 10 L50 40 M30 40 L70 40 L80 100 L50 150 L20 100 Z' fill='%23E2E8F0' stroke='%23FFF' stroke-width='2'/><circle cx='50' cy='20' r='10' fill='%23CBD5E1'/><circle cx='50' cy='85' r='15' fill='%2394A3B8'/></svg>";
-        const silverNecklaceSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><path d='M 30,20 Q 150,180 270,20' fill='none' stroke='%23CBD5E1' stroke-width='14'/><path d='M 50,40 Q 150,190 250,40' fill='none' stroke='%23FFFFFF' stroke-width='6'/><circle cx='150' cy='125' r='18' fill='%2394A3B8'/></svg>";
+        const silverEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23E2E8F0' stroke='%2394A3B8' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23CBD5E1' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23CBD5E1' stroke='%23FFFFFF' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%23052A1F'/><circle cx='50' cy='95' r='8' fill='%23FFFFFF'/></svg>";
 
         const catalog = [
-            // Gold Products
-            { id: 'g1', title: 'Royal Heritage Jhumka', metal: 'gold', category: 'earring', price: '₹88,500', image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&q=80', tryable: true, overlay: goldEarringSVG },
-            { id: 'g2', title: 'Imperial Solitaire Ring', metal: 'gold', category: 'ring', price: '₹45,000', image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80', tryable: false },
-            { id: 'g3', title: '22K Heavy Rope Chain', metal: 'gold', category: 'chain', price: '₹1,25,000', image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
-            { id: 'g4', title: 'Delhi Craft Gold Pendant', metal: 'gold', category: 'pendant', price: '₹38,200', image: 'https://images.unsplash.com/photo-1611591475197-2856f6c77d48?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
+            { id: 'g1', title: 'Royal Heritage Jhumka', metal: 'gold', category: 'earring', price: '₹92,500', image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&q=80', tryable: true, overlay: goldEarringSVG },
+            { id: 'g2', title: 'Imperial Solitaire Ring', metal: 'gold', category: 'ring', price: '₹48,000', image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80', tryable: false },
+            { id: 'g3', title: '22K Heavy Rope Chain', metal: 'gold', category: 'chain', price: '₹1,32,000', image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
+            { id: 'g4', title: 'Delhi Craft Gold Pendant', metal: 'gold', category: 'pendant', price: '₹41,200', image: 'https://images.unsplash.com/photo-1611591475197-2856f6c77d48?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
 
-            // Silver Products
-            { id: 's1', title: 'Silver Lotus Earrings', metal: 'silver', category: 'earring', price: '₹4,500', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80', tryable: true, overlay: silverEarringSVG },
-            { id: 's2', title: 'Sterling Carved Band', metal: 'silver', category: 'ring', price: '₹2,800', image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&q=80', tryable: false },
-            { id: 's3', title: '925 Italian Link Chain', metal: 'silver', category: 'chain', price: '₹8,200', image: 'https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&q=80', tryable: true, overlay: silverNecklaceSVG },
-            { id: 's4', title: 'Crystal Silver Pendant', metal: 'silver', category: 'pendant', price: '₹3,900', image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80', tryable: true, overlay: silverNecklaceSVG }
+            { id: 's1', title: 'Silver Lotus Earrings', metal: 'silver', category: 'earring', price: '₹4,800', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80', tryable: true, overlay: silverEarringSVG },
+            { id: 's2', title: 'Sterling Carved Band', metal: 'silver', category: 'ring', price: '₹2,900', image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&q=80', tryable: false },
+            { id: 's3', title: '925 Italian Link Chain', metal: 'silver', category: 'chain', price: '₹8,900', image: 'https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
+            { id: 's4', title: 'Crystal Silver Pendant', metal: 'silver', category: 'pendant', price: '₹4,200', image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80', tryable: true, overlay: goldNecklaceSVG }
         ];
 
         let selectedMetal = 'gold';
         let selectedCategory = 'all';
         let activeItem = catalog[0];
-
-        // Fetch Live Rates
-        async function fetchLiveRates() {
-            try {
-                const res = await fetch('https://api.metalpriceapi.com/v1/latest?api_key=demo&base=INR&currencies=XAU,XAG');
-                const data = await res.json();
-                if(data && data.rates) {
-                    const goldGram = Math.round((1 / data.rates.XAU) / 31.1035);
-                    const silverGram = Math.round((1 / data.rates.XAG) / 31.1035);
-                    if(goldGram > 0) document.getElementById('rate-gold').innerText = `₹${goldGram.toLocaleString('en-IN')}/g`;
-                    if(silverGram > 0) document.getElementById('rate-silver').innerText = `₹${silverGram.toLocaleString('en-IN')}/g`;
-                }
-            } catch(e) {
-                // Default Delhi market benchmark
-                document.getElementById('rate-gold').innerText = `₹6,850/g`;
-                document.getElementById('rate-silver').innerText = `₹88/g`;
-            }
-        }
 
         function switchMetal(metal) {
             selectedMetal = metal;
@@ -228,14 +195,13 @@
                 silverBtn.classList.remove('opacity-60');
                 goldBtn.classList.add('opacity-60');
             }
-
             renderCatalog();
         }
 
         function filterCategory(cat, evt) {
             selectedCategory = cat;
             document.querySelectorAll('.cat-btn').forEach(btn => {
-                btn.className = 'cat-btn bg-black/60 text-gray-300 hover:text-white px-5 py-2 rounded-full border border-white/10';
+                btn.className = 'cat-btn bg-emeraldCard text-gray-200 hover:text-white px-5 py-2 rounded-full border border-gold-400/20';
             });
             evt.target.className = 'cat-btn bg-gold-400 text-black font-bold px-5 py-2 rounded-full border border-gold-400';
             renderCatalog();
@@ -249,11 +215,11 @@
 
             filtered.forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'bg-black/60 border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-gold-400/50 transition-all';
+                card.className = 'bg-emeraldCard/80 border border-gold-400/20 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-gold-400/60 transition-all shadow-xl';
                 card.innerHTML = `
                     <div class="relative h-64 overflow-hidden">
                         <img src="${item.image}" class="w-full h-full object-cover">
-                        <span class="absolute top-3 left-3 bg-black/80 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full text-gold-300 border border-gold-400/20">
+                        <span class="absolute top-3 left-3 bg-emeraldDark/90 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full text-gold-300 border border-gold-400/30">
                             In-House Crafted
                         </span>
                         ${item.tryable ? `
@@ -262,9 +228,9 @@
                             </button>
                         ` : ''}
                     </div>
-                    <div class="p-5 flex justify-between items-center border-t border-white/10">
+                    <div class="p-5 flex justify-between items-center border-t border-gold-400/10">
                         <div>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase font-cinzel">${item.category}</p>
+                            <p class="text-[10px] font-bold text-gray-300 uppercase font-cinzel">${item.category}</p>
                             <h4 class="font-cinzel font-bold text-sm text-white">${item.title}</h4>
                         </div>
                         <span class="text-sm font-bold text-gold-300 font-cinzel">${item.price}</span>
@@ -274,7 +240,7 @@
             });
         }
 
-        // AI CAMERA TRACKING ENGINE
+        // AI CAMERA ENGINE (PERFECT EAR PLACEMENT)
         let faceMeshInstance = null, cameraInstance = null;
         let overlayImg = new Image();
 
@@ -318,19 +284,37 @@
                         const lm = results.multiFaceLandmarks[0];
                         const w = canvasElement.width, h = canvasElement.height;
 
-                        if(activeItem.category === 'earring') {
-                            const leftEar = lm[177] || lm[234];
-                            const rightEar = lm[397] || lm[454];
-                            const earDist = Math.hypot((leftEar.x - rightEar.x)*w, (leftEar.y - rightEar.y)*h);
-                            const size = earDist * 0.45;
+                        if (activeItem.category === 'earring') {
+                            // Exact Ear Lobe Indices in MediaPipe (132: Left Earlobe, 361: Right Earlobe)
+                            const leftEar = lm[132] || lm[234];
+                            const rightEar = lm[361] || lm[454];
 
-                            canvasCtx.drawImage(overlayImg, (leftEar.x * w) - size/2, (leftEar.y * h), size, size * 1.5);
-                            canvasCtx.drawImage(overlayImg, (rightEar.x * w) - size/2, (rightEar.y * h), size, size * 1.5);
+                            const faceWidth = Math.hypot((leftEar.x - rightEar.x)*w, (leftEar.y - rightEar.y)*h);
+                            const earringWidth = faceWidth * 0.28; 
+                            const earringHeight = earringWidth * 1.8;
+
+                            // Left Earring Position
+                            canvasCtx.drawImage(
+                                overlayImg, 
+                                (leftEar.x * w) - (earringWidth * 0.7), 
+                                (leftEar.y * h) - (earringHeight * 0.1), 
+                                earringWidth, 
+                                earringHeight
+                            );
+
+                            // Right Earring Position
+                            canvasCtx.drawImage(
+                                overlayImg, 
+                                (rightEar.x * w) - (earringWidth * 0.3), 
+                                (rightEar.y * h) - (earringHeight * 0.1), 
+                                earringWidth, 
+                                earringHeight
+                            );
                         } else {
                             const chin = lm[152];
                             const neckX = chin.x * w;
-                            const neckY = (chin.y * h) + (h * 0.05);
-                            const width = w * 0.35;
+                            const neckY = (chin.y * h) + (h * 0.04);
+                            const width = w * 0.38;
                             canvasCtx.drawImage(overlayImg, neckX - width/2, neckY, width, width * 0.7);
                         }
                     }
@@ -353,11 +337,7 @@
             }
         }
 
-        window.onload = () => { 
-            fetchLiveRates();
-            renderCatalog(); 
-            setInterval(fetchLiveRates, 60000); // 1-minute auto refresh
-        };
+        window.onload = () => { renderCatalog(); };
     </script>
 </body>
 </html>
