@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0a08">
+<meta name="description" content="Al Sayed Jewellers — timeless jewellery, elegant designs and trusted craftsmanship in Jamia Nagar, New Delhi.">
+<title>Al Sayed Jewellers | Timeless Elegance</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+:root{--bg:#0b0a08;--card:#12100d;--gold:#d7b56d;--gold2:#f0d89a;--cream:#f8f2e7;--muted:#b9b0a3;--line:rgba(215,181,109,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Inter,Arial,sans-serif}a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+.nav{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(11,10,8,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navin{height:78px;display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:auto;padding:0 24px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:700;letter-spacing:.4px}.logo span{color:var(--gold)}
+.links{display:flex;gap:28px;font-size:13px;color:#d9d0c2}.links a:hover{color:var(--gold2)}
+.navcta{border:1px solid var(--gold);padding:11px 17px;border-radius:999px;color:var(--gold2);font-size:12px;font-weight:700}
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 72% 40%,rgba(164,116,36,.2),transparent 34%),linear-gradient(115deg,#0b0a08 0%,#11100d 58%,#17120b 100%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,10,8,.96) 0%,rgba(11,10,8,.7) 45%,rgba(11,10,8,.2) 100%)}
+.heroimg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;opacity:.43}
+.hero .wrap{position:relative;width:100%;padding-top:100px}
+.kicker{color:var(--gold2);text-transform:uppercase;letter-spacing:4px;font-size:11px;font-weight:700;margin-bottom:20px}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(60px,9vw,112px);line-height:.86;margin:0 0 28px;max-width:760px;font-weight:500}
+.hero p{max-width:540px;color:#d0c6b8;line-height:1.8;font-size:16px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:999px;font-size:13px;font-weight:700;transition:.25s}.primary{background:var(--gold);color:#17110a}.primary:hover{background:var(--gold2);transform:translateY(-2px)}.ghost{border:1px solid rgba(255,255,255,.22);color:#fff}.ghost:hover{border-color:var(--gold);color:var(--gold2)}
+section{padding:105px 0}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-size:10px;font-weight:700;margin-bottom:12px}h2{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,5vw,66px);line-height:1;margin:0 0 18px;font-weight:500}.lead{color:var(--muted);max-width:650px;line-height:1.8}
+.collections{background:#0e0d0b}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}.collection{height:480px;border-radius:22px;overflow:hidden;position:relative;border:1px solid var(--line);background:#17130e}.collection:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.86),transparent 65%)}.collection img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.collection:hover img{transform:scale(1.05)}.ctext{position:absolute;z-index:2;left:25px;right:25px;bottom:24px}.ctext h3{font-family:"Cormorant Garamond",serif;font-size:34px;margin:0 0 7px}.ctext p{font-size:12px;color:#d0c7ba;margin:0}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.storyimg{height:560px;border-radius:24px;overflow:hidden;border:1px solid var(--line)}.storyimg img{width:100%;height:100%;object-fit:cover}.checks{display:grid;gap:14px;margin:30px 0}.check{display:flex;gap:12px;align-items:flex-start;color:#d5ccbe;font-size:14px}.check b{color:var(--gold2)}
+.products{background:#0e0d0b}.productgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}.product{background:#15120f;border:1px solid rgba(255,255,255,.07);border-radius:18px;overflow:hidden}.product img{width:100%;aspect-ratio:1/1;object-fit:cover}.productbody{padding:18px}.productbody h3{font-family:"Cormorant Garamond",serif;font-size:25px;margin:0 0 5px}.productbody p{font-size:11px;color:var(--muted);margin:0}
+.banner{margin-top:70px;border:1px solid var(--line);border-radius:24px;padding:42px;background:linear-gradient(110deg,rgba(215,181,109,.13),rgba(255,255,255,.02));display:flex;justify-content:space-between;gap:30px;align-items:center}.banner h3{font-family:"Cormorant Garamond",serif;font-size:38px;margin:0 0 6px}.banner p{color:var(--muted);margin:0;line-height:1.6}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px}.contactbox{background:#12100d;border:1px solid var(--line);border-radius:24px;padding:32px}.contactrow{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.07)}.contactrow:last-child{border:0}.icon{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--gold)}.contactrow strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}.contactrow span{font-size:14px;color:var(--muted);line-height:1.5}
+footer{padding:35px 0;border-top:1px solid rgba(255,255,255,.07);color:#8f877b;font-size:11px}.footerin{display:flex;justify-content:space-between;gap:20px}
+.float{position:fixed;right:20px;bottom:20px;z-index:60;background:#25d366;color:#fff;border-radius:999px;padding:14px 18px;font-size:12px;font-weight:700;box-shadow:0 12px 35px rgba(0,0,0,.35)}
+@media(max-width:850px){.links{display:none}.grid{grid-template-columns:1fr}.collection{height:430px}.story,.contact{grid-template-columns:1fr;gap:35px}.storyimg{height:420px}.productgrid{grid-template-columns:1fr 1fr}.banner{display:block}.banner .btn{margin-top:22px}.hero{min-height:92vh}.heroimg{opacity:.3}}
+@media(max-width:520px){.wrap{padding:0 17px}.navin{padding:0 17px;height:70px}.logo{font-size:25px}.navcta{padding:9px 12px}.hero .wrap{padding-top:90px}h1{font-size:62px}.hero p{font-size:14px}.productgrid{grid-template-columns:1fr 1fr;gap:10px}.productbody{padding:13px}.productbody h3{font-size:21px}section{padding:75px 0}.footerin{display:block}.footerin div+div{margin-top:10px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="navin"><a class="logo" href="#"><span>Al Sayed</span> Jewellers</a><div class="links"><a href="#collections">Collections</a><a href="#story">Our Story</a><a href="#featured">Featured</a><a href="#contact">Contact</a></div><a class="navcta" href="https://wa.me/919821705266?text=Hello%20Al%20Sayed%20Jewellers%2C%20I%20would%20like%20to%20enquire%20about%20your%20jewellery.">Enquire</a></div></nav>
+
+<header class="hero">
+<div class="heroimg"></div>
+<div class="wrap">
+<div class="kicker">Est. • Jamia Nagar, New Delhi</div>
+<h1>Timeless<br><span style="color:var(--gold2)">Elegance.</span></h1>
+<p>Discover jewellery made to celebrate your moments — refined designs, beautiful details and a timeless sense of luxury from Al Sayed Jewellers.</p>
+<div class="buttons"><a class="btn primary" href="#collections">Explore Collections</a><a class="btn ghost" href="https://wa.me/919821705266?text=Hello%20Al%20Sayed%20Jewellers%2C%20I%20want%20to%20visit%20your%20store.">WhatsApp Us</a></div>
+</div></header>
+
+<section id="collections" class="collections"><div class="wrap">
+<div class="eyebrow">Curated for you</div><h2>Collections with character.</h2><p class="lead">From everyday elegance to unforgettable celebrations, find a piece that feels unmistakably yours.</p>
+<div class="grid">
+<a class="collection" href="#featured"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85"><div class="ctext"><h3>Rings</h3><p>Elegant silhouettes for every occasion →</p></div></a>
+<a class="collection" href="#featured"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=85"><div class="ctext"><h3>Necklaces</h3><p>Statement pieces with timeless appeal →</p></div></a>
+<a class="collection" href="#featured"><img src="https://images.unsplash.com/photo-1619119069152-a2b331eb392a?auto=format&fit=crop&w=1000&q=85"><div class="ctext"><h3>Bracelets</h3><p>Subtle shine, beautifully finished →</p></div></a>
+</div></div></section>
+
+<section id="story"><div class="wrap story">
+<div class="storyimg"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=85"></div>
+<div><div class="eyebrow">The Al Sayed standard</div><h2>Made for moments that matter.</h2><p class="lead">At Al Sayed Jewellers, jewellery is more than an accessory. It is a memory, a milestone and a little piece of your story.</p>
+<div class="checks"><div class="check"><b>01</b><span><strong>Thoughtful designs</strong><br>Classic styles with a modern finish.</span></div><div class="check"><b>02</b><span><strong>Personal service</strong><br>Friendly guidance to help you choose with confidence.</span></div><div class="check"><b>03</b><span><strong>Visit us in Delhi</strong><br>Come see the collection in person at our Jamia Nagar store.</span></div></div>
+<a class="btn primary" href="https://maps.google.com/?q=Al+Sayed+Jewellers,+Nafees+Rd,+Jamia,+Batla+House,+Jamia+Nagar,+Okhla,+New+Delhi,+Delhi+110025">Get Directions</a></div>
+</div></section>
+
+<section id="featured" class="products"><div class="wrap">
+<div class="eyebrow">Featured edit</div><h2>Jewellery to remember.</h2><p class="lead">A glimpse of the styles you can explore in store. Contact us for availability, pricing and personalised assistance.</p>
+<div class="productgrid">
+<div class="product"><img src="https://images.unsplash.com/photo-1603561596112-db2e2e8f8c8c?auto=format&fit=crop&w=700&q=85"><div class="productbody"><h3>Classic Gold</h3><p>Timeless • Refined • Elegant</p></div></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=85"><div class="productbody"><h3>Everyday Shine</h3><p>Minimal • Versatile • Chic</p></div></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85"><div class="productbody"><h3>Statement</h3><p>Bold • Graceful • Distinct</p></div></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1588444650733-dc6e7a4a6e4f?auto=format&fit=crop&w=700&q=85"><div class="productbody"><h3>Bridal Edit</h3><p>Celebration • Tradition • Luxury</p></div></div>
+</div>
+<div class="banner"><div><h3>Looking for something special?</h3><p>Message us on WhatsApp and tell us what you're looking for. We'll help you find the right piece.</p></div><a class="btn primary" href="https://wa.me/919821705266?text=Hello%20Al%20Sayed%20Jewellers%2C%20I%27m%20looking%20for%20a%20special%20jewellery%20piece.">Start a Conversation</a></div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<div><div class="eyebrow">Visit the store</div><h2>Let's find your piece.</h2><p class="lead">Have a question, want to see a collection, or planning a special purchase? Get in touch with us.</p><div class="buttons"><a class="btn primary" href="tel:+919821705266">Call +91 98217 05266</a><a class="btn ghost" href="https://www.instagram.com/alsayedjewellers2026/">Instagram</a></div></div>
+<div class="contactbox">
+<div class="contactrow"><div class="icon">⌖</div><div><strong>Address</strong><span>Nafees Rd, Jamia, Batla House,<br>Jamia Nagar, Okhla, New Delhi,<br>Delhi 110025</span></div></div>
+<div class="contactrow"><div class="icon">☎</div><div><strong>Call</strong><span>+91 98217 05266<br>Alternative: +91 88268 36771</span></div></div>
+<div class="contactrow"><div class="icon">◎</div><div><strong>Instagram</strong><span>@alsayedjewellers2026</span></div></div>
+<a class="btn primary" style="width:100%;margin-top:12px" href="https://maps.google.com/?q=Al+Sayed+Jewellers,+Nafees+Rd,+Jamia,+Batla+House,+Jamia+Nagar,+Okhla,+New+Delhi,+Delhi+110025">Open Google Maps</a>
+</div></div></section>
+
+<footer><div class="wrap footerin"><div>© 2026 Al Sayed Jewellers. All rights reserved.</div><div>Jamia Nagar • New Delhi</div></div></footer>
+<a class="float" href="https://wa.me/919821705266?text=Hello%20Al%20Sayed%20Jewellers%2C%20I%20would%20like%20to%20enquire.">WhatsApp ↗</a>
+</body></html>
