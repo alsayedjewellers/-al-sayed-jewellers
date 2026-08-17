@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Al Sayed Jewellers | Royal Fine Jewellery</title>
+  <title>Al Sayed Jewellers | Fine Jewellery & Bullion Rates</title>
   
   <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,14 +12,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
+    /* 7-STAR LUXURY HOTEL MENU COLOR PALETTE (GILDED NOIR) */
     :root {
-      --royal-dark: #030f0a;
-      --royal-green: #072218;
-      --card-bg: #0b2d20;
-      --gold-primary: #d4af37;
-      --gold-light: #f3e5ab;
+      --royal-dark: #0a0b0d;         /* Ultra-Dark Obsidian Matte */
+      --royal-green: #121418;        /* Dark Slate Base */
+      --card-bg: #15181e;            /* Fine-Dining Menu Card BG */
+      --gold-primary: #d4af37;       /* Metallic Imperial Gold */
+      --gold-light: #f5e6be;         /* Soft Champagne Accent */
       --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
-      --text-cream: #f4efe6;
+      --text-cream: #f8f5ef;         /* Ivory Menu Text */
     }
 
     * {
@@ -42,7 +43,7 @@
 
     /* TOP ANNOUNCEMENT BAR */
     .top-bar {
-      background: linear-gradient(90deg, #020b07, #0a2e20, #020b07);
+      background: linear-gradient(90deg, #050506, #15181e, #050506);
       text-align: center;
       padding: 8px 12px;
       font-size: 0.7rem;
@@ -54,7 +55,7 @@
 
     /* HEADER */
     header {
-      background: rgba(7, 34, 24, 0.98);
+      background: rgba(10, 11, 13, 0.95);
       backdrop-filter: blur(10px);
       padding: 12px 5%;
       display: flex;
@@ -125,42 +126,38 @@
       box-shadow: 0 0 10px var(--gold-primary);
     }
 
-    /* HERO SECTION */
+    /* HERO SECTION (UPDATED HEADING & SLOGAN) */
     .hero {
-      background: linear-gradient(rgba(3, 15, 10, 0.85), rgba(3, 15, 10, 0.85)), 
+      background: linear-gradient(rgba(10, 11, 13, 0.88), rgba(10, 11, 13, 0.88)), 
                   url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600') center/cover;
-      min-height: 60vh;
+      min-height: 55vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       border-bottom: 2px solid rgba(212, 175, 55, 0.3);
     }
 
     .hero h2 {
-      font-size: 2.2rem;
-      font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: 2px;
-    }
-
-    .hero h2 span {
+      font-size: 2.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 3px;
       background: var(--gold-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      display: block;
-      font-weight: 700;
-      margin-top: 8px;
+      font-family: 'Cinzel Decorative', serif;
     }
 
     .hero p {
-      margin: 18px 0 28px;
-      font-size: 0.95rem;
+      margin: 15px 0 30px;
+      font-size: 0.9rem;
       color: var(--gold-light);
-      font-weight: 300;
-      letter-spacing: 1.5px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     /* CONTINUOUS SHINE BUTTON EFFECT */
@@ -178,7 +175,7 @@
       gap: 10px;
       text-decoration: none;
       border-radius: 3px;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -211,14 +208,23 @@
 
     .btn-royal:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.7);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
     }
 
-    /* MAIN CONTAINER */
+    /* MAIN CONTAINER & 7-STAR MENU BORDERS */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px;
+    }
+
+    /* MENU CARD DOUBLE GOLD BORDER EFFECT */
+    .rate-box, .gallery-item, .dual-banner {
+      background: var(--card-bg);
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      outline: 1px solid rgba(212, 175, 55, 0.15);
+      outline-offset: -5px;
+      border-radius: 6px;
     }
 
     .section-title {
@@ -239,10 +245,7 @@
 
     /* BULLION RATE SECTION */
     .rate-box {
-      background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.35);
       padding: 25px 20px;
-      border-radius: 8px;
       text-align: center;
       margin-bottom: 40px;
     }
@@ -279,10 +282,10 @@
     }
 
     .rate-card {
-      background: rgba(3, 15, 10, 0.7);
-      border: 1px solid rgba(212, 175, 55, 0.2);
+      background: rgba(10, 11, 13, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.25);
       padding: 15px 10px;
-      border-radius: 6px;
+      border-radius: 4px;
     }
 
     .rate-card .type {
@@ -300,7 +303,7 @@
 
     .rate-card .unit {
       font-size: 0.7rem;
-      color: #888;
+      color: #aaa;
     }
 
     .rate-card .change {
@@ -367,16 +370,13 @@
     }
 
     .gallery-item {
-      background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      border-radius: 8px;
       overflow: hidden;
       transition: all 0.3s ease;
       text-align: center;
     }
 
     .gallery-item:hover {
-      border-color: var(--gold-primary);
+      border-color: var(--gold-primary) !important;
       transform: translateY(-5px);
       box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
     }
@@ -408,13 +408,10 @@
 
     /* DUAL BANNER */
     .dual-banner {
-      background: var(--card-bg);
-      border: 1px solid rgba(212, 175, 55, 0.3);
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: 30px;
       gap: 30px;
-      border-radius: 8px;
       margin-bottom: 50px;
     }
 
@@ -444,7 +441,7 @@
 
     /* FOOTER */
     footer {
-      background: #020b07;
+      background: #050506;
       border-top: 1px solid rgba(212, 175, 55, 0.3);
       padding: 30px 5%;
       display: flex;
@@ -520,10 +517,10 @@
     </div>
   </header>
 
-  <!-- HERO SECTION WITH SHINING BUTTON -->
+  <!-- HERO SECTION WITH NEW HEADING & SLOGAN -->
   <section class="hero">
-    <h2>Timeless Royalty.<br><span>Crafted With Perfection.</span></h2>
-    <p>Exclusive Gold & Silver Fine Jewellery</p>
+    <h2>AL SAYED JEWELLERS</h2>
+    <p>Curators of Fine Heritage & Certified Gold Artistry</p>
     <a href="https://maps.app.goo.gl/SxfXYjNuWSgAVQ6D7?g_st=ic" target="_blank" class="btn-royal">
       <i class="fa-solid fa-location-dot"></i> VISIT OUR SHOWROOM
     </a>
@@ -541,25 +538,25 @@
       <div class="rate-grid">
         <div class="rate-card">
           <div class="type">24K Gold</div>
-          <div class="price" id="rate-24k">₹15,581</div>
+          <div class="price">₹15,581</div>
           <div class="unit">/gram</div>
           <div class="change up">▲ ₹53</div>
         </div>
         <div class="rate-card">
           <div class="type">22K Gold</div>
-          <div class="price" id="rate-22k">₹14,285</div>
+          <div class="price">₹14,285</div>
           <div class="unit">/gram</div>
           <div class="change up">▲ ₹50</div>
         </div>
         <div class="rate-card">
           <div class="type">18K Gold</div>
-          <div class="price" id="rate-18k">₹11,691</div>
+          <div class="price">₹11,691</div>
           <div class="unit">/gram</div>
           <div class="change up">▲ ₹41</div>
         </div>
         <div class="rate-card">
           <div class="type">Silver</div>
-          <div class="price" id="rate-silver">₹255.00</div>
+          <div class="price">₹255.00</div>
           <div class="unit">/gram</div>
           <div class="change up">▲ ₹1.50</div>
         </div>
@@ -571,7 +568,7 @@
     </div>
 
     <!-- COLLECTIONS TABS -->
-    <h2 class="section-title">OUR COLLECTIONS</h2>
+    <h2 class="section-title">OUR MENU & COLLECTIONS</h2>
 
     <div class="tab-buttons">
       <button class="tab-btn active" onclick="switchTab('gold')">GOLD</button>
