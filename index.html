@@ -1,97 +1,646 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#062d20">
-<meta name="description" content="Al Sayed — premium gold and silver jewellery, custom orders and in-house manufacturing in Jamia Nagar, New Delhi.">
-<title>Al Sayed Jewellers | Timeless Elegance</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
-:root{--green:#032b1f;--green2:#061c15;--gold:#d9ad5d;--gold2:#f1d18b;--cream:#f7f2e8;--ink:#102019;--muted:#6d746e;--paper:#f5f1e8;--line:#dfd8c9}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif}a{text-decoration:none;color:inherit}button{font:inherit}.wrap{max-width:1180px;margin:auto;padding:0 28px}
-.nav{position:fixed;z-index:100;top:0;left:0;right:0;background:rgba(3,43,31,.97);border-bottom:1px solid rgba(241,209,139,.14);box-shadow:0 6px 30px rgba(0,0,0,.12)}.navin{height:78px;display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:auto;padding:0 28px}.brand{font-family:"Cormorant Garamond",serif;color:var(--gold2);font-size:29px;font-weight:700;line-height:.75}.brand small{display:block;font-family:Inter,sans-serif;font-size:8px;letter-spacing:3px;text-align:center;margin-top:8px;color:#e5c27d}.links{display:flex;gap:28px;color:#f7f1e6;font-size:12px;font-weight:600}.links a:hover{color:var(--gold2)}.socials{display:flex;gap:10px}.circle{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:16px}.mobileMenu{display:none}
-.hero{min-height:620px;height:78vh;max-height:760px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--green)}.heroimg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1900&q=90') center/cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,32,23,.98) 0%,rgba(2,42,30,.88) 38%,rgba(2,42,30,.22) 78%,rgba(2,32,23,.18) 100%)}.hero .wrap{position:relative;z-index:2;width:100%;padding-top:72px}.hero h1{font-family:"Cormorant Garamond",serif;color:white;font-size:clamp(58px,7vw,92px);line-height:.9;font-weight:600;max-width:650px;margin:0 0 20px}.hero h1 span{color:var(--gold2)}.hero p{font-size:18px;line-height:1.65;color:#f1eadf;max-width:520px;margin:0}.orn{width:215px;height:1px;background:var(--gold);margin:22px 0;position:relative}.orn:after{content:"✦";position:absolute;left:50%;top:-10px;transform:translateX(-50%);background:var(--green);color:var(--gold);padding:0 8px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:6px;padding:14px 23px;font-size:13px;font-weight:700;transition:.2s;cursor:pointer;border:0}.primary{background:linear-gradient(135deg,#efca80,#d9aa57);color:#0a2118}.primary:hover{transform:translateY(-2px)}.outline{border:1px solid var(--gold);color:var(--gold2);background:transparent}.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.section{padding:62px 0}.sectionTitle{text-align:center;font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:600;margin:0;color:#08291f}.sectionTitle:before,.sectionTitle:after{content:"✦";font-size:13px;color:#9e7841;margin:0 18px;vertical-align:middle}.sub{text-align:center;color:#70766f;font-size:13px;margin:10px auto 30px;max-width:650px;line-height:1.7}
-.collectionGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}.collectionCard{border-radius:10px;overflow:hidden;background:#fff;border:1px solid #ddd5c4;box-shadow:0 8px 28px rgba(24,34,28,.06)}.cardTop{height:225px;position:relative;overflow:hidden}.cardTop img{width:100%;height:100%;object-fit:cover;transition:.5s}.collectionCard:hover .cardTop img{transform:scale(1.04)}.cardTop:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,202,123,.15),rgba(255,255,255,.04))}.cardLabel{position:absolute;z-index:2;inset:0;display:flex;align-items:center;justify-content:flex-end;padding:30px 45px}.cardLabel h3{font-family:"Cormorant Garamond",serif;font-size:37px;margin:0 0 14px;color:#071c14;text-transform:uppercase;letter-spacing:1px}.cardBody{padding:20px 28px 22px;display:grid;grid-template-columns:1fr 1fr;gap:13px 20px}.cat{display:flex;align-items:center;gap:10px;font-size:14px;color:#26322d;cursor:pointer}.cat:hover{color:#8a642d}.catIcon{width:27px;height:27px;border:1px solid #bd8d3f;border-radius:50%;display:grid;place-items:center;color:#9d712f;font-size:11px}.cardAction{grid-column:1/-1;text-align:center;margin-top:3px}.darkPill{display:inline-flex;background:var(--green);color:white;border-radius:22px;padding:10px 17px;font-size:12px;font-weight:700}.darkPill:hover{background:#07533b}
-.rateSection{padding:10px 0 45px}.rateBox{background:#fff;border:1px solid #ddd5c4;border-radius:12px;padding:24px;box-shadow:0 8px 28px rgba(24,34,28,.05)}.rateHead{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:18px}.rateHead h2{font-family:"Cormorant Garamond",serif;font-size:30px;margin:0}.live{font-size:11px;color:#177144;font-weight:700}.live i{display:inline-block;width:7px;height:7px;background:#2dbd6e;border-radius:50%;margin-right:5px}.rates{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.rate{background:#f8f4ec;border:1px solid #e8e0d0;border-radius:8px;padding:18px;text-align:center}.rate .name{font-size:13px;color:#946a2b;margin-bottom:7px}.rate .price{font-size:24px;font-weight:700;color:#17231d}.rate .unit{font-size:12px;color:#73776f}.rate .change{font-size:10px;margin-top:7px;color:#777}.updated{text-align:center;font-size:11px;color:#777;margin-top:15px}.rateNote{font-size:10px;color:#888;text-align:center;margin-top:8px}
-.business{background:var(--green);color:white;padding:36px 0}.businessGrid{display:grid;grid-template-columns:1fr 1fr}.businessCard{padding:30px 42px;display:flex;gap:25px;align-items:center}.businessCard+ .businessCard{border-left:1px solid rgba(241,209,139,.45)}.bizIcon{font-size:55px;color:var(--gold2);min-width:70px;text-align:center}.businessCard h3{font-family:"Cormorant Garamond",serif;font-size:27px;margin:0 0 7px;color:var(--gold2)}.businessCard p{font-size:13px;line-height:1.65;color:#e7e2d8;margin:0 0 15px}
-.trust{padding:28px 0;background:#f9f5ed}.trustGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.trustItem{text-align:center;font-size:11px;font-weight:700;line-height:1.5;color:#222}.trustIcon{font-size:28px;color:#111;margin-bottom:6px}
-.footer{background:var(--green);color:white;padding:28px 0}.footGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.footItem{text-align:center}.footItem strong{display:block;color:var(--gold2);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}.footItem span{font-size:13px}.copyright{border-top:1px solid rgba(241,209,139,.16);margin-top:22px;padding-top:18px;text-align:center;color:#aab2ab;font-size:10px}
-.modal{position:fixed;z-index:200;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalBox{background:#faf6ed;width:min(560px,100%);border-radius:12px;padding:28px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.3)}.close{position:absolute;right:16px;top:12px;border:0;background:none;font-size:25px;color:#777;cursor:pointer}.modalBox h2{font-family:"Cormorant Garamond",serif;font-size:36px;margin:0 0 5px;color:#062b20}.modalBox p{font-size:12px;color:#747970;margin:0 0 20px}.modalCats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.modalCats a{background:white;border:1px solid #e1d8c7;border-radius:7px;padding:15px;font-size:13px;font-weight:600}.modalCats a:hover{border-color:#b48740;color:#8b622a}
-.float{position:fixed;right:18px;bottom:18px;z-index:150;background:#25d366;color:white;border-radius:50px;padding:13px 17px;font-size:12px;font-weight:700;box-shadow:0 10px 25px rgba(0,0,0,.25)}
-@media(max-width:900px){.links{display:none}.socials{display:none}.collectionGrid{grid-template-columns:1fr}.businessGrid{grid-template-columns:1fr}.businessCard+ .businessCard{border-left:0;border-top:1px solid rgba(241,209,139,.45)}.rates{grid-template-columns:1fr 1fr}.trustGrid{grid-template-columns:1fr 1fr}.footGrid{grid-template-columns:1fr}.mobileMenu{display:block;color:var(--gold2);font-size:22px}.navin{height:70px}.hero{height:720px}.heroimg{background-position:62% center}}
-@media(max-width:560px){.wrap{padding:0 17px}.brand{font-size:24px}.hero h1{font-size:59px}.hero p{font-size:15px}.hero{min-height:680px}.cardTop{height:190px}.cardLabel{padding:20px}.cardLabel h3{font-size:31px}.cardBody{padding:17px 18px;grid-template-columns:1fr 1fr;gap:11px}.sectionTitle{font-size:29px}.sectionTitle:before,.sectionTitle:after{margin:0 8px}.rates{gap:8px}.rate{padding:14px 7px}.rate .price{font-size:18px}.rate .name{font-size:11px}.businessCard{padding:25px 18px;gap:15px}.bizIcon{font-size:42px;min-width:50px}.businessCard h3{font-size:24px}.modalCats{grid-template-columns:1fr}.float{right:12px;bottom:12px}}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al Sayed Jewellers</title>
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-/* Emerald Luxury Refinement */
-:root{--green:#063b2b;--green2:#02271d;--green3:#0a4a36;--emerald:#0b5a41;--gold:#cda45d;--gold2:#f4d99a;--champ:#e8c77d;--cream:#fbf8f0;--paper:#f4f1e8;--ink:#10251d;--line:#ded6c5}
-body{background:linear-gradient(180deg,#fbfaf5 0%,#f3efe5 100%)}
-.nav{background:rgba(2,39,29,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(244,217,154,.28);box-shadow:0 8px 35px rgba(0,20,14,.28)}
-.navin{height:88px}
-.brand{font-size:31px;letter-spacing:2.2px;line-height:.8;text-shadow:0 2px 18px rgba(244,217,154,.14)}
-.brandMain{color:#f6d997}
-.brand small{font-size:8px;letter-spacing:4px;color:#e7c77f;margin-top:10px}
-.links{gap:31px;font-size:11px;letter-spacing:.7px}.links a{position:relative;padding:30px 0}.links a:after{content:"";position:absolute;left:0;right:100%;bottom:21px;height:1px;background:var(--gold2);transition:.25s}.links a:hover:after{right:0}
-.circle{width:40px;height:40px;border-color:rgba(244,217,154,.75);box-shadow:inset 0 0 18px rgba(244,217,154,.04)}
-.hero{min-height:680px;height:86vh;max-height:820px;background:#02271d}.heroimg{background-image:url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=2200&q=95');filter:saturate(.9) contrast(1.04)}
-.hero:after{background:radial-gradient(circle at 73% 42%,rgba(9,86,62,.08),transparent 35%),linear-gradient(90deg,rgba(1,31,23,.98) 0%,rgba(2,48,35,.9) 38%,rgba(2,48,35,.34) 70%,rgba(1,27,20,.18) 100%)}
-.hero .wrap{padding-top:85px}.hero h1{font-size:clamp(64px,7.2vw,102px);letter-spacing:-1px;text-shadow:0 4px 35px rgba(0,0,0,.25)}.hero h1 span{background:linear-gradient(90deg,#f6d99a,#c9964b);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:17px;color:#f7f2e7;max-width:545px}.orn{background:linear-gradient(90deg,transparent,var(--gold2),transparent);height:1px}.orn:after{background:#063b2b}
-.btn{border-radius:3px;padding:15px 25px;letter-spacing:.7px}.primary{background:linear-gradient(135deg,#f3d18c,#c9964b);box-shadow:0 8px 24px rgba(201,150,75,.2)}.outline{border-color:#e6c77f;background:rgba(2,39,29,.18);backdrop-filter:blur(5px)}
-.section{padding:78px 0}.sectionTitle{font-size:39px;letter-spacing:.3px}.sectionTitle:before,.sectionTitle:after{color:#c29652}.sub{font-size:13px;color:#707a73}
-.collectionGrid{gap:24px}.collectionCard{border-radius:14px;border:1px solid rgba(111,88,48,.16);box-shadow:0 18px 50px rgba(27,42,34,.09);transition:.3s}.collectionCard:hover{transform:translateY(-5px);box-shadow:0 24px 65px rgba(27,42,34,.14)}.cardTop{height:245px}.cardTop:after{background:linear-gradient(90deg,rgba(5,59,43,.04),rgba(255,255,255,.04))}.cardLabel h3{font-size:43px;color:#0a2c20;text-shadow:0 1px 0 rgba(255,255,255,.3)}.darkPill{background:linear-gradient(135deg,#063b2b,#0b5a41);border:1px solid rgba(244,217,154,.35);box-shadow:0 7px 18px rgba(2,39,29,.16);padding:11px 19px}.darkPill:hover{background:linear-gradient(135deg,#0a5a41,#073524)}.cardBody{background:linear-gradient(180deg,#fffdf8,#f5f0e6)}.catIcon{border-color:#c59a54;color:#9d712f}
-.rateSection{padding:8px 0 55px}.rateBox{border-radius:14px;padding:29px;background:linear-gradient(135deg,#fffdf8,#f6f0e3);box-shadow:0 18px 50px rgba(27,42,34,.08)}.rateHead h2{font-size:34px;color:#082e21}.live{color:#13774a}.rate{background:linear-gradient(145deg,#fffdf8,#f1eadc);border-color:#e2d7c2;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}.rate .price{color:#082d21;font-family:Inter,sans-serif}.rate .name{color:#9a6c2b}
-.business{background:linear-gradient(120deg,#02271d,#063b2b 48%,#074631);position:relative;overflow:hidden}.business:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 20%,rgba(244,217,154,.07),transparent 25%),radial-gradient(circle at 90% 80%,rgba(244,217,154,.06),transparent 28%);pointer-events:none}.businessGrid{position:relative}.businessCard{padding:38px 44px}.businessCard h3{font-size:30px;letter-spacing:.4px}.businessCard p{color:#e9e5dc}.bizIcon{filter:drop-shadow(0 5px 12px rgba(244,217,154,.12))}
-.trust{background:#fbf8f0;border-top:1px solid #e5ddcc;border-bottom:1px solid #e5ddcc}.trustItem{color:#21332b}.trustIcon{color:#0a3d2c}
-.footer{background:#02271d;border-top:1px solid rgba(244,217,154,.18)}
-.modalBox{border:1px solid rgba(191,151,83,.3);border-radius:16px;background:linear-gradient(145deg,#fffdf8,#f4ede0)}.modalBox h2{color:#063b2b}.modalCats a{transition:.2s}.modalCats a:hover{background:#f8f0df;border-color:#c59a54;transform:translateY(-2px)}
-.float{background:#16a85b;box-shadow:0 12px 32px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.15)}
-@media(max-width:900px){.navin{height:74px}.hero{height:760px}.hero .wrap{padding-top:95px}}
+  <style>
+    /* RESET & BASE STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f6f0;
+      color: #111;
+      line-height: 1.5;
+    }
 
-</style>
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cinzel', serif;
+    }
+
+    /* COLOR PALETTE */
+    :root {
+      --dark-green: #082218;
+      --gold-accent: #d4af37;
+      --gold-button: #d8b774;
+      --bg-cream: #f4f0e6;
+      --bg-card: #e9e4d7;
+      --text-white: #ffffff;
+    }
+
+    /* HEADER / NAVBAR */
+    header {
+      background-color: var(--dark-green);
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-accent);
+    }
+
+    .brand-logo i {
+      font-size: 2rem;
+    }
+
+    .brand-text h1 {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      color: var(--gold-button);
+    }
+
+    .brand-text span {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      display: block;
+      color: #bbb;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--gold-button);
+      text-decoration: underline;
+    }
+
+    .social-header a {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-left: 12px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      padding: 6px 8px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(rgba(8, 34, 24, 0.85), rgba(8, 34, 24, 0.7)), 
+                  url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1600') center/cover;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 8%;
+      color: var(--text-white);
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .hero h2 span {
+      color: var(--gold-button);
+      display: block;
+    }
+
+    .hero p {
+      margin: 15px 0 25px;
+      font-size: 1.1rem;
+      color: #ddd;
+      font-weight: 300;
+    }
+
+    .btn-gold {
+      background-color: var(--gold-button);
+      color: #000;
+      padding: 10px 22px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      text-decoration: none;
+      border-radius: 2px;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .section-title::before, .section-title::after {
+      content: "❖───";
+      color: var(--gold-accent);
+      font-size: 0.8rem;
+    }
+
+    /* COLLECTIONS GRID */
+    .collections-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .collection-card {
+      background-color: var(--bg-card);
+      border-radius: 4px;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .card-banner {
+      height: 180px;
+      border-radius: 4px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gold-banner {
+      background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1611591475140-438856db0cd1?auto=format&fit=crop&q=80&w=600');
+    }
+
+    .silver-banner {
+      background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600');
+    }
+
+    .card-banner h3 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: #111;
+    }
+
+    .btn-dark {
+      background-color: #000;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .item-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .item-list div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .item-list i {
+      color: #555;
+    }
+
+    /* MIDDLE ROW: OFFER, RATES, TIMINGS */
+    .info-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1.2fr;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .offer-box, .timing-box {
+      background-color: var(--dark-green);
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .offer-box h4, .timing-box h4 {
+      color: var(--gold-button);
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .offer-box .big-num {
+      font-size: 3.5rem;
+      font-family: 'Cinzel', serif;
+      color: var(--gold-button);
+      margin: 10px 0;
+    }
+
+    .rate-box {
+      background-color: var(--bg-card);
+      padding: 20px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .rate-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .rate-card {
+      background: #fdfbf7;
+      padding: 12px 5px;
+      border-radius: 4px;
+    }
+
+    .rate-card .type {
+      font-size: 0.75rem;
+      color: #666;
+    }
+
+    .rate-card .price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 5px 0;
+    }
+
+    .rate-card .unit {
+      font-size: 0.7rem;
+      color: #888;
+    }
+
+    .rate-card .change {
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    .up { color: green; }
+    .down { color: red; }
+
+    /* DUAL BANNER (VISIT & CUSTOM) */
+    .dual-banner {
+      background-color: var(--dark-green);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 30px;
+      gap: 30px;
+      border-radius: 4px;
+      margin-bottom: 40px;
+    }
+
+    .banner-col {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .banner-col i {
+      font-size: 2.5rem;
+      color: var(--gold-button);
+    }
+
+    .banner-col h3 {
+      color: var(--gold-button);
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .banner-col p {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    /* TRUST BADGES */
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--bg-card);
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    .badge-item i {
+      font-size: 1.5rem;
+    }
+
+    .badge-item text {
+      text-align: left;
+    }
+
+    .badge-item h5 {
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .badge-item p {
+      font-size: 0.65rem;
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--dark-green);
+      color: #fff;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .footer-col {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-col i {
+      font-size: 1.5rem;
+      color: var(--gold-button);
+    }
+
+    .footer-col div label {
+      display: block;
+      font-size: 0.65rem;
+      color: #aaa;
+      letter-spacing: 1px;
+    }
+
+    .footer-col div span {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 900px) {
+      .collections-grid, .info-row, .dual-banner, .trust-badges, footer {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 20px;
+      }
+      nav { display: none; } /* Simplified for quick responsive viewing */
+    }
+  </style>
 </head>
 <body>
-<nav class="nav"><div class="navin"><a class="brand" href="#top"><span class="brandMain">AL SAYED</span><br><small>JEWELLERS • SINCE 2026</small></a><div class="links"><a href="#collections">COLLECTIONS</a><a href="#rates">GOLD RATE</a><a href="#business">OUR FACTORY</a><a href="#contact">CONTACT</a></div><div class="socials"><a class="circle" href="https://wa.me/918826836771" aria-label="WhatsApp">◔</a><a class="circle" href="https://www.instagram.com/alsayedjewellers2026/" aria-label="Instagram">◎</a></div><div class="mobileMenu">☰</div></div></nav>
 
-<header id="top" class="hero"><div class="heroimg"></div><div class="wrap"><div style="color:var(--gold2);letter-spacing:4px;font-size:11px;font-weight:700">PREMIUM GOLD &amp; SILVER JEWELLERY</div><h1>Timeless Elegance.<br><span>Crafted with Trust.</span></h1><p>Beautiful jewellery for every moment — thoughtfully selected, professionally crafted and backed by our own manufacturing capability.</p><div class="orn"></div><div class="buttons"><a class="btn primary" href="#collections">EXPLORE COLLECTIONS →</a><a class="btn outline" href="https://maps.google.com/?q=Al+Sayed+Jewellers,+Nafees+Rd,+Jamia,+Batla+House,+Jamia+Nagar,+Okhla,+New+Delhi,+Delhi+110025">⌖ VISIT OUR SHOP</a></div></div></header>
+  <!-- HEADER -->
+  <header>
+    <div class="brand-logo">
+      <i class="fa-solid fa-gem"></i>
+      <div class="brand-text">
+        <h1>AL SAYED</h1>
+        <span>JEWELLERS • SINCE 1998</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="#">COLLECTIONS</a></li>
+        <li><a href="#">GOLD RATE</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">OUR FACTORY</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="social-header">
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </header>
 
-<section id="collections" class="section"><div class="wrap"><h2 class="sectionTitle">EXPLORE OUR COLLECTIONS</h2><p class="sub">Choose a metal first, then explore the jewellery category you are looking for.</p><div class="collectionGrid">
-<div class="collectionCard"><div class="cardTop"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1100&q=90"><div class="cardLabel"><div><h3>GOLD</h3><button class="darkPill" onclick="openMetal('gold')">EXPLORE GOLD →</button></div></div></div><div class="cardBody"><a class="cat" href="#" onclick="selectCat('Gold','Rings');return false"><span class="catIcon">◯</span>Rings</a><a class="cat" href="#" onclick="selectCat('Gold','Bangles');return false"><span class="catIcon">◎</span>Bangles</a><a class="cat" href="#" onclick="selectCat('Gold','Chains');return false"><span class="catIcon">⌁</span>Chains</a><a class="cat" href="#" onclick="selectCat('Gold','Necklaces');return false"><span class="catIcon">♢</span>Necklaces</a><a class="cat" href="#" onclick="selectCat('Gold','Earrings');return false"><span class="catIcon">◌</span>Earrings</a><a class="cat" href="#" onclick="selectCat('Gold','Pendants');return false"><span class="catIcon">◇</span>Pendants</a><div class="cardAction"><button class="darkPill" onclick="openMetal('gold')">VIEW ALL GOLD</button></div></div></div>
-<div class="collectionCard"><div class="cardTop"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1100&q=90"><div class="cardLabel"><div><h3>SILVER</h3><button class="darkPill" onclick="openMetal('silver')">EXPLORE SILVER →</button></div></div></div><div class="cardBody"><a class="cat" href="#" onclick="selectCat('Silver','Rings');return false"><span class="catIcon">◯</span>Rings</a><a class="cat" href="#" onclick="selectCat('Silver','Bracelets');return false"><span class="catIcon">◎</span>Bracelets</a><a class="cat" href="#" onclick="selectCat('Silver','Chains');return false"><span class="catIcon">⌁</span>Chains</a><a class="cat" href="#" onclick="selectCat('Silver','High Polish Sets');return false"><span class="catIcon">◇</span>High Polish Sets</a><a class="cat" href="#" onclick="selectCat('Silver','Other Silver Jewellery');return false"><span class="catIcon">✦</span>Other Silver Jewellery</a><div class="cardAction"><button class="darkPill" onclick="openMetal('silver')">VIEW ALL SILVER</button></div></div></div>
-</div></div></section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Timeless Elegance.<br><span>Crafted with Trust.</span></h2>
+    <p>Premium Gold & Silver Jewellery<br>for Every Moment.</p>
+    <a href="#" class="btn-gold"><i class="fa-solid fa-location-dot"></i> VISIT OUR SHOP</a>
+  </section>
 
-<section id="rates" class="rateSection"><div class="wrap"><div class="rateBox"><div class="rateHead"><div><div style="color:#9b6d2d;font-size:10px;letter-spacing:3px;font-weight:700">LIVE MARKET INDICATION</div><h2>TODAY'S GOLD &amp; SILVER RATE</h2></div><div class="live"><i></i><span id="liveStatus">UPDATING…</span></div></div><div class="rates"><div class="rate"><div class="name">24K Gold</div><div class="price" id="g24">₹—</div><div class="unit">/ gram</div><div class="change" id="g24c">Live spot</div></div><div class="rate"><div class="name">22K Gold</div><div class="price" id="g22">₹—</div><div class="unit">/ gram</div><div class="change">91.67% purity</div></div><div class="rate"><div class="name">18K Gold</div><div class="price" id="g18">₹—</div><div class="unit">/ gram</div><div class="change">75% purity</div></div><div class="rate"><div class="name">Silver</div><div class="price" id="silver">₹—</div><div class="unit">/ gram</div><div class="change">Live spot</div></div></div><div class="updated">Last updated: <span id="updated">—</span> • Auto refresh</div><div class="rateNote">Indicative international spot rates converted to INR. Final showroom price may vary with purity, GST, making charges and product design.</div></div></div></section>
+  <!-- MAIN CONTENT CONTAINER -->
+  <div class="container">
 
-<section id="business" class="business"><div class="wrap businessGrid"><div class="businessCard"><div class="bizIcon">♧</div><div><h3>VISIT OUR SHOP</h3><p>Experience Al Sayed Jewellers in person. Explore our collections, compare designs and receive personalised assistance at our showroom.</p><a class="btn primary" href="https://maps.google.com/?q=Al+Sayed+Jewellers,+Nafees+Rd,+Jamia,+Batla+House,+Jamia+Nagar,+Okhla,+New+Delhi,+Delhi+110025">⌖ GET DIRECTIONS</a></div></div><div class="businessCard"><div class="bizIcon">♜</div><div><h3>CUSTOM ORDERS &amp; OWN MANUFACTURING</h3><p>Have a specific design in mind? We accept customised jewellery orders and create them through our own manufacturing facility — crafted with attention to detail from concept to finish.</p><a class="btn primary" href="https://wa.me/918826836771?text=Hello%20Al%20Sayed%20Jewellers%2C%20I%20would%20like%20to%20discuss%20a%20custom%20jewellery%20order.">CUSTOM ORDER →</a></div></div></div></section>
+    <h2 class="section-title">EXPLORE OUR COLLECTIONS</h2>
 
-<section class="trust"><div class="wrap trustGrid"><div class="trustItem"><div class="trustIcon">◉</div>CERTIFIED<br>HALLMARK JEWELLERY</div><div class="trustItem"><div class="trustIcon">♢</div>100%<br>TRUST &amp; TRANSPARENCY</div><div class="trustItem"><div class="trustIcon">△</div>BIS HALLMARK<br>CERTIFIED</div><div class="trustItem"><div class="trustIcon">⌑</div>SECURE<br>PAYMENT OPTIONS</div></div></section>
+    <!-- COLLECTIONS SECTION -->
+    <div class="collections-grid">
+      <!-- Gold Card -->
+      <div class="collection-card">
+        <div class="card-banner gold-banner">
+          <h3>GOLD</h3>
+          <button class="btn-dark">EXPLORE GOLD &gt;</button>
+        </div>
+        <div class="item-list">
+          <div><i class="fa-solid fa-ring"></i> Rings</div>
+          <div><i class="fa-solid fa-circle-notch"></i> Bangles</div>
+          <div><i class="fa-solid fa-link"></i> Chains</div>
+          <div><i class="fa-solid fa-gem"></i> Necklaces</div>
+          <div><i class="fa-solid fa-paperclip"></i> Earrings</div>
+          <div><i class="fa-solid fa-shield-heart"></i> Pendants</div>
+        </div>
+      </div>
 
-<section id="contact" style="padding:0"><footer class="footer"><div class="wrap"><div class="footGrid"><div class="footItem"><strong>CALL US</strong><span>+91 88268 36771</span></div><div class="footItem"><strong>WHATSAPP US</strong><span>+91 88268 36771</span></div><div class="footItem"><strong>FOLLOW US</strong><span>@alsayedjewellers2026</span></div></div><div class="copyright">© 2026 Al Sayed • Jamia Nagar, New Delhi • Own Manufacturing &amp; Custom Orders</div></div></footer></section>
-<a class="float" href="https://wa.me/918826836771?text=Hello%20Al%20Sayed%20Jewellers%2C%20I%20would%20like%20to%20enquire.">WhatsApp ↗</a>
+      <!-- Silver Card -->
+      <div class="collection-card">
+        <div class="card-banner silver-banner">
+          <h3>SILVER</h3>
+          <button class="btn-dark">EXPLORE SILVER &gt;</button>
+        </div>
+        <div class="item-list">
+          <div><i class="fa-solid fa-ring"></i> Rings</div>
+          <div><i class="fa-solid fa-sparkles"></i> High Polish Sets</div>
+          <div><i class="fa-solid fa-circle-notch"></i> Bracelets</div>
+          <div><i class="fa-solid fa-gem"></i> Other Silver Jewellery</div>
+          <div><i class="fa-solid fa-link"></i> Chains</div>
+        </div>
+      </div>
+    </div>
 
-<div id="metalModal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modalBox"><button class="close" onclick="closeModal()">×</button><div style="font-size:10px;letter-spacing:3px;color:#9b6d2d;font-weight:700">EXPLORE COLLECTION</div><h2 id="modalTitle">Gold Jewellery</h2><p>Select a category to enquire or explore further.</p><div id="modalCats" class="modalCats"></div></div></div>
-<script>
-const categories={gold:['Rings','Bangles','Chains','Necklaces','Earrings','Pendants','Other Gold Jewellery'],silver:['Rings','Bracelets','Chains','High Polish Sets','Other Silver Jewellery']};
-function openMetal(m){document.getElementById('modalTitle').textContent=(m==='gold'?'Gold':'Silver')+' Jewellery';document.getElementById('modalCats').innerHTML=categories[m].map(c=>`<a href="https://wa.me/918826836771?text=${encodeURIComponent('Hello Al Sayed Jewellers, I am interested in '+c+' from '+(m==='gold'?'Gold':'Silver')+' collection.')}">${c} →</a>`).join('');document.getElementById('metalModal').classList.add('open')}
-function closeModal(){document.getElementById('metalModal').classList.remove('open')}
-function selectCat(m,c){openMetal(m.toLowerCase());setTimeout(()=>{document.getElementById('modalTitle').textContent=m+' • '+c},0)}
-async function fetchRates(){
- const status=document.getElementById('liveStatus');
- try{
-  status.textContent='UPDATING…';
-  const [goldRes,silverRes,fxRes]=await Promise.all([fetch('https://api.gold-api.com/price/XAU'),fetch('https://api.gold-api.com/price/XAG'),fetch('https://open.er-api.com/v6/latest/USD')]);
-  const gold=await goldRes.json(), silver=await silverRes.json(), fx=await fxRes.json();
-  const usdInr=fx.rates.INR;
-  const goldUsdOz=Number(gold.price), silverUsdOz=Number(silver.price);
-  if(!goldUsdOz||!silverUsdOz||!usdInr) throw new Error('Rate unavailable');
-  const ozToGram=31.1034768;
-  const g24=goldUsdOz*usdInr/ozToGram;
-  const s=silverUsdOz*usdInr/ozToGram;
-  const money=n=>'₹'+Math.round(n).toLocaleString('en-IN');
-  document.getElementById('g24').textContent=money(g24); document.getElementById('g22').textContent=money(g24*.9167); document.getElementById('g18').textContent=money(g24*.75); document.getElementById('silver').textContent=money(s);
-  document.getElementById('updated').textContent=new Date().toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  status.textContent='LIVE';
- }catch(e){status.textContent='RATE SERVICE UNAVAILABLE';document.getElementById('updated').textContent='Please contact showroom for current selling rate';}
-}
-fetchRates(); setInterval(fetchRates,300000);
-</script>
-</body></html>
+    <!-- OFFERS, RATES, TIMINGS -->
+    <div class="info-row">
+      <!-- Special Offer -->
+      <div class="offer-box">
+        <h4>SPECIAL OFFER</h4>
+        <p style="font-size:0.7rem; letter-spacing:1px;">MAKING CHARGES</p>
+        <div class="big-num">9%</div>
+        <p style="font-size:0.6rem; color:#aaa;">*Making charges may vary depending on design and product.</p>
+      </div>
+
+      <!-- Gold Rates -->
+      <div class="rate-box">
+        <h4 class="serif">TODAY'S GOLD RATE</h4>
+        <div class="rate-grid">
+          <div class="rate-card">
+            <div class="type">24K Gold</div>
+            <div class="price">₹7,230</div>
+            <div class="unit">/gram</div>
+            <div class="change up">▲ 35</div>
+          </div>
+          <div class="rate-card">
+            <div class="type">22K Gold</div>
+            <div class="price">₹6,630</div>
+            <div class="unit">/gram</div>
+            <div class="change up">▲ 30</div>
+          </div>
+          <div class="rate-card">
+            <div class="type">18K Gold</div>
+            <div class="price">₹5,420</div>
+            <div class="unit">/gram</div>
+            <div class="change up">▲ 25</div>
+          </div>
+          <div class="rate-card">
+            <div class="type">Silver</div>
+            <div class="price">₹89.50</div>
+            <div class="unit">/gram</div>
+            <div class="change down">▼ 0.50</div>
+          </div>
+        </div>
+        <p style="font-size:0.65rem; color:#666; margin-top:10px;"><i class="fa-solid fa-rotate-right"></i> Last updated: 18 May 2025, 12:30 PM</p>
+      </div>
+
+      <!-- Timings -->
+      <div class="timing-box">
+        <h4><i class="fa-regular fa-clock"></i> SHOP TIMINGS</h4>
+        <p style="font-size:1.1rem; font-weight:bold; margin:10px 0;">1:00 PM – 10:00 PM</p>
+        <p style="font-size:0.75rem;">Wednesday to Monday</p>
+        <p style="font-size:0.8rem; color: var(--gold-button); margin-top:10px; font-weight:bold;">TUESDAY CLOSED</p>
+      </div>
+    </div>
+
+    <!-- DUAL VISIT / CUSTOM BANNER -->
+    <div class="dual-banner">
+      <div class="banner-col">
+        <i class="fa-solid fa-store"></i>
+        <div>
+          <h3>VISIT OUR SHOP</h3>
+          <p>Experience Al Sayed Jewellers in person. Explore our exclusive collections, compare designs and receive personalised assistance at our showroom.</p>
+          <a href="#" class="btn-gold">GET DIRECTIONS</a>
+        </div>
+      </div>
+      <div class="banner-col">
+        <i class="fa-solid fa-industry"></i>
+        <div>
+          <h3>CUSTOM ORDERS & OUR OWN MANUFACTURING</h3>
+          <p>Made by us. Crafted for you. With our own manufacturing facility, we accept customised jewellery orders and bring your dream design to life.</p>
+          <a href="#" class="btn-gold">KNOW MORE &gt;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRUST BADGES -->
+    <div class="trust-badges">
+      <div class="badge-item">
+        <i class="fa-solid fa-award"></i>
+        <div>
+          <h5>CERTIFIED</h5>
+          <p>HALLMARK JEWELLERY</p>
+        </div>
+      </div>
+      <div class="badge-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <h5>100%</h5>
+          <p>TRUST & TRANSPARENCY</p>
+        </div>
+      </div>
+      <div class="badge-item">
+        <i class="fa-solid fa-stamp"></i>
+        <div>
+          <h5>BIS HALLMARK</h5>
+          <p>CERTIFIED</p>
+        </div>
+      </div>
+      <div class="badge-item">
+        <i class="fa-solid fa-lock"></i>
+        <div>
+          <h5>SECURE</h5>
+          <p>PAYMENT OPTIONS</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-col">
+      <i class="fa-solid fa-phone"></i>
+      <div>
+        <label>CALL US</label>
+        <span>+91 98765 43210</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <i class="fa-brands fa-whatsapp"></i>
+      <div>
+        <label>WHATSAPP US</label>
+        <span>+91 98765 43210</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <i class="fa-brands fa-instagram"></i>
+      <div>
+        <label>FOLLOW US</label>
+        <span>@alsayedjewellers</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
