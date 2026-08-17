@@ -3,96 +3,560 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Sayed Jewellers | Luxury Defined</title>
+    <title>Al Sayed Jewellers - Since 1998</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://tailwindcomponents.com/tailwind-script-v2.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fcfbf7; color: #2d3748; }
-        .lux-black { background-color: #1a1a1a; }
-        .lux-gold { color: #c5a059; }
-        .bg-lux-gold { background-color: #c5a059; }
-        .font-cinzel { font-family: 'Cinzel', serif; }
-        .font-playfair { font-family: 'Playfair Display', serif; }
-        
-        .hero-section { 
-            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), 
-            url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=2000'); 
-            background-size: cover; background-position: center; 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#03121D',      /* Emerald Blue Dark Foundation */
+                        brandGreen: '#06202E',     /* Rich Emerald-Blue Accent */
+                        brandCream: '#F4F7F6',
+                        brandCard: '#EAF0F2',      /* Soft Blue-Gray Cream Card Background */
+                        goldBase: '#D4AF37',
+                        goldLight: '#F3E5AB',
+                        goldDark: '#997A15'
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
         }
+    </script>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- MediaPipe Face Mesh & Camera Utils -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F4F7F6; color: #1a1a1a; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
     </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col justify-between">
 
-    <!-- NAV -->
-    <nav class="flex justify-between items-center px-10 py-6 bg-white border-b border-gray-100">
-        <div class="font-cinzel text-xl tracking-[0.2em] font-bold">AL SAYED</div>
-        <div class="space-x-8 text-xs font-semibold uppercase tracking-widest text-gray-500">
-            <a href="#" class="hover:text-black">Home</a>
-            <a href="#collections" class="hover:text-black">Collections</a>
-            <a href="#rates" class="hover:text-black">Live Rates</a>
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="bg-brandDark border-b border-goldBase/30 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- LOGO -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border border-goldBase flex items-center justify-center text-goldBase font-cinzel font-bold text-lg">
+                    AS
+                </div>
+                <div>
+                    <h2 class="font-cinzel font-bold text-white tracking-widest text-lg">AL SAYED</h2>
+                    <p class="text-[9px] font-cinzel tracking-[0.25em] text-goldBase uppercase">JEWELLERS • SINCE 1998</p>
+                </div>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="flex flex-wrap justify-center gap-6 font-cinzel text-xs text-gray-300 font-semibold tracking-wider">
+                <a href="#" class="text-goldBase border-b border-goldBase pb-1">HOME</a>
+                <a href="#collections" class="hover:text-goldBase transition-colors">COLLECTIONS</a>
+                <a href="#rates" class="hover:text-goldBase transition-colors">GOLD RATE</a>
+                <a href="#about" class="hover:text-goldBase transition-colors">ABOUT US</a>
+                <a href="#factory" class="hover:text-goldBase transition-colors">OUR FACTORY</a>
+                <a href="#contact" class="hover:text-goldBase transition-colors">CONTACT</a>
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/" target="_blank" class="w-9 h-9 rounded-full bg-brandGreen border border-goldBase/40 text-goldBase flex items-center justify-center hover:bg-goldBase hover:text-black transition-all">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" class="w-9 h-9 rounded-full bg-brandGreen border border-goldBase/40 text-goldBase flex items-center justify-center hover:bg-goldBase hover:text-black transition-all">
+                    <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero-section h-[70vh] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 class="text-6xl font-playfair italic font-bold">Timeless Elegance.</h1>
-        <p class="mt-4 font-cinzel text-lg tracking-widest text-gray-300">CRAFTED WITH TRUST SINCE 1998</p>
-        <button class="mt-10 px-10 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-gray-200 transition">Visit Our Showroom</button>
+    <!-- HERO SECTION (Emerald Blue Theme) -->
+    <header class="relative bg-brandDark text-white py-16 px-6 overflow-hidden border-b border-goldBase/25 shadow-2xl">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div class="space-y-6">
+                <h1 class="text-4xl md:text-6xl font-cinzel font-black tracking-wide leading-tight">
+                    Timeless Elegance.<br>
+                    <span class="text-goldBase">Crafted with Trust.</span>
+                </h1>
+                <p class="text-gray-300 font-light text-base max-w-md">
+                    Premium Gold & Silver Jewellery for Every Moment. Handcrafted to perfection.
+                </p>
+                <div class="pt-2">
+                    <a href="#collections" class="inline-flex items-center gap-2 bg-goldBase text-black font-cinzel font-bold text-xs px-8 py-3.5 rounded shadow-lg hover:bg-goldLight transition-all">
+                        VISIT OUR SHOP <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=700&q=80" alt="Royal Necklace" class="relative rounded-xl border border-goldBase/40 shadow-2xl max-h-80 object-cover w-full">
+            </div>
+        </div>
     </header>
 
-    <!-- COLLECTIONS SECTION -->
-    <section id="collections" class="max-w-7xl mx-auto px-6 py-20">
-        <h2 class="text-4xl font-cinzel text-center mb-16">Explore Our Collections</h2>
-        <div class="grid md:grid-cols-2 gap-10">
+    <!-- EXPLORE OUR COLLECTIONS SECTION -->
+    <section id="collections" class="max-w-7xl mx-auto px-6 py-14 w-full">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-cinzel font-bold tracking-widest text-brandDark">
+                ✦ EXPLORE OUR COLLECTIONS ✦
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <!-- GOLD CARD -->
-            <div class="group relative overflow-hidden bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e" class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-105">
-                <div class="absolute bottom-10 left-10 text-white">
-                    <h3 class="text-3xl font-cinzel">Gold Jewellery</h3>
-                    <button class="mt-4 px-6 py-2 border border-white hover:bg-white hover:text-black transition">Explore Gold</button>
+            <div class="bg-brandCard border border-goldBase/30 rounded-2xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="relative h-56 rounded-xl overflow-hidden mb-6 shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                            <h3 class="text-2xl font-cinzel font-bold text-goldBase tracking-wider">GOLD</h3>
+                        </div>
+                    </div>
+                    <!-- CATEGORY LINKS GRID -->
+                    <div class="grid grid-cols-2 gap-4 text-xs font-cinzel font-semibold text-gray-800 mb-6 px-2">
+                        <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-ring text-goldBase"></i> Rings
+                        </button>
+                        <button onclick="filterCategory('bangle', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-circle-dot text-goldBase"></i> Bangles
+                        </button>
+                        <button onclick="filterCategory('chain', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-link text-goldBase"></i> Chains
+                        </button>
+                        <button onclick="filterCategory('necklace', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-gem text-goldBase"></i> Necklaces
+                        </button>
+                        <button onclick="filterCategory('earring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-feather text-goldBase"></i> Earrings
+                        </button>
+                        <button onclick="filterCategory('pendant', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-star text-goldBase"></i> Pendants
+                        </button>
+                    </div>
                 </div>
+                <button onclick="switchMetal('gold')" class="w-full bg-brandDark text-goldBase font-cinzel font-bold py-3 rounded-xl tracking-widest text-xs hover:bg-brandGreen transition-all">
+                    EXPLORE GOLD <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
             </div>
+
             <!-- SILVER CARD -->
-            <div class="group relative overflow-hidden bg-gray-100">
-                <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236" class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-105">
-                <div class="absolute bottom-10 left-10 text-white">
-                    <h3 class="text-3xl font-cinzel">Silver Collection</h3>
-                    <button class="mt-4 px-6 py-2 border border-white hover:bg-white hover:text-black transition">Explore Silver</button>
+            <div class="bg-brandCard border border-goldBase/30 rounded-2xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="relative h-56 rounded-xl overflow-hidden mb-6 shadow-inner">
+                        <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&q=80" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                            <h3 class="text-2xl font-cinzel font-bold text-gray-200 tracking-wider">SILVER</h3>
+                        </div>
+                    </div>
+                    <!-- CATEGORY LINKS GRID -->
+                    <div class="grid grid-cols-2 gap-4 text-xs font-cinzel font-semibold text-gray-800 mb-6 px-2">
+                        <button onclick="filterCategory('ring', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-ring text-blue-900"></i> Rings
+                        </button>
+                        <button onclick="filterCategory('high-polish', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-wand-magic-sparkles text-blue-900"></i> High Polish Sets
+                        </button>
+                        <button onclick="filterCategory('bracelet', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-circle-notch text-blue-900"></i> Bracelets
+                        </button>
+                        <button onclick="filterCategory('other', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-shapes text-blue-900"></i> Other Silver Jewellery
+                        </button>
+                        <button onclick="filterCategory('chain', event)" class="flex items-center gap-2 hover:text-blue-900 transition-colors text-left">
+                            <i class="fa-solid fa-link text-blue-900"></i> Chains
+                        </button>
+                    </div>
+                </div>
+                <button onclick="switchMetal('silver')" class="w-full bg-brandDark text-white font-cinzel font-bold py-3 rounded-xl tracking-widest text-xs hover:bg-brandGreen transition-all">
+                    EXPLORE SILVER <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- LIVE CATALOGUE GRID -->
+        <div class="mb-6 flex justify-between items-center border-b border-gray-300 pb-4">
+            <h3 id="current-collection-title" class="font-cinzel font-bold text-lg text-brandDark">GOLD COLLECTION CATALOGUE</h3>
+            <div class="flex gap-2 font-cinzel text-xs">
+                <button onclick="switchMetal('gold')" id="tab-gold" class="px-4 py-1.5 rounded bg-brandDark text-goldBase font-bold">Gold</button>
+                <button onclick="switchMetal('silver')" id="tab-silver" class="px-4 py-1.5 rounded bg-gray-200 text-gray-700 font-bold">Silver</button>
+            </div>
+        </div>
+        <div id="jewel-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </section>
+
+    <!-- OFFERS, RATES & TIMINGS SECTION -->
+    <section id="rates" class="max-w-7xl mx-auto px-6 py-8 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- SPECIAL OFFER -->
+            <div class="bg-brandDark rounded-2xl p-6 text-white border border-goldBase/30 flex flex-col justify-between text-center shadow-xl">
+                <div>
+                    <p class="text-xs font-cinzel tracking-widest text-goldBase uppercase mb-2">Special Offer</p>
+                    <h4 class="font-cinzel font-bold text-sm text-gray-200">MAKING CHARGES</h4>
+                    <div class="my-4">
+                        <span class="text-6xl font-cinzel font-black text-goldBase">9%</span>
+                    </div>
+                </div>
+                <p class="text-[11px] text-gray-400 font-light">*Making charges may vary depending on design and product.</p>
+            </div>
+
+            <!-- TODAY'S GOLD RATE BOARD -->
+            <div class="bg-brandCard rounded-2xl p-6 border border-goldBase/30 shadow-xl flex flex-col justify-between">
+                <div class="text-center mb-4">
+                    <p class="text-xs font-cinzel font-bold tracking-widest text-brandDark uppercase">✦ TODAY'S GOLD RATE ✦</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="bg-white/70 p-3 rounded-xl border border-goldBase/20">
+                        <p class="text-[10px] font-cinzel text-gray-600 font-semibold">24K Gold</p>
+                        <p class="text-base font-bold text-brandDark font-cinzel">₹7,230</p>
+                        <p class="text-[10px] text-green-600 font-semibold">▲ 35</p>
+                    </div>
+                    <div class="bg-white/70 p-3 rounded-xl border border-goldBase/20">
+                        <p class="text-[10px] font-cinzel text-gray-600 font-semibold">22K Gold</p>
+                        <p class="text-base font-bold text-brandDark font-cinzel">₹6,630</p>
+                        <p class="text-[10px] text-green-600 font-semibold">▲ 30</p>
+                    </div>
+                    <div class="bg-white/70 p-3 rounded-xl border border-goldBase/20">
+                        <p class="text-[10px] font-cinzel text-gray-600 font-semibold">18K Gold</p>
+                        <p class="text-base font-bold text-brandDark font-cinzel">₹5,420</p>
+                        <p class="text-[10px] text-green-600 font-semibold">▲ 25</p>
+                    </div>
+                    <div class="bg-white/70 p-3 rounded-xl border border-goldBase/20">
+                        <p class="text-[10px] font-cinzel text-gray-600 font-semibold">Silver</p>
+                        <p class="text-base font-bold text-brandDark font-cinzel">₹89.50</p>
+                        <p class="text-[10px] text-red-600 font-semibold">▼ 0.50</p>
+                    </div>
+                </div>
+                <p class="text-[10px] text-center text-gray-500 mt-4">Last updated: 18 May 2026, 12:30 PM ⟳</p>
+            </div>
+
+            <!-- SHOP TIMINGS -->
+            <div class="bg-brandDark rounded-2xl p-6 text-white border border-goldBase/30 flex flex-col justify-between text-center shadow-xl">
+                <div>
+                    <div class="flex justify-center mb-2">
+                        <i class="fa-regular fa-clock text-goldBase text-xl"></i>
+                    </div>
+                    <h4 class="font-cinzel font-bold text-xs tracking-widest text-goldBase uppercase mb-4">SHOP TIMINGS</h4>
+                    <p class="text-2xl font-cinzel font-black text-white mb-2">1:00 PM – 10:00 PM</p>
+                    <p class="text-xs text-gray-300 font-light">Wednesday to Monday</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-goldBase/20">
+                    <span class="text-xs font-cinzel font-bold tracking-widest text-red-400">TUESDAY CLOSED</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RATE SECTION -->
-    <section id="rates" class="bg-gray-50 py-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <h3 class="font-cinzel text-2xl text-center mb-10">Live Market Rates</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
-                    <p class="text-xs text-gray-400">24K Gold</p>
-                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-24k">₹7,230</p>
+    <!-- VISIT SHOP & CUSTOM ORDERS -->
+    <section id="factory" class="max-w-7xl mx-auto px-6 py-8 w-full">
+        <div class="bg-brandDark rounded-2xl p-8 text-white grid grid-cols-1 md:grid-cols-2 gap-8 border border-goldBase/30 shadow-xl">
+            <!-- SHOP VISIT -->
+            <div class="flex flex-col justify-between space-y-4 md:border-r border-goldBase/20 md:pr-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="fa-solid fa-store text-goldBase text-2xl"></i>
+                        <h3 class="font-cinzel font-bold text-lg text-goldBase">VISIT OUR SHOP</h3>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Experience Al Sayed Jewellers in person. Explore our exclusive collections, compare designs and receive personalised assistance at our showroom.
+                    </p>
                 </div>
-                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
-                    <p class="text-xs text-gray-400">22K Gold</p>
-                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-22k">₹6,630</p>
+                <div>
+                    <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 bg-goldBase text-black font-cinzel font-bold text-xs px-6 py-3 rounded-xl hover:bg-goldLight transition-all">
+                        <i class="fa-solid fa-location-dot"></i> GET DIRECTIONS
+                    </a>
                 </div>
-                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
-                    <p class="text-xs text-gray-400">18K Gold</p>
-                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-18k">₹5,420</p>
+            </div>
+
+            <!-- MANUFACTURING -->
+            <div class="flex flex-col justify-between space-y-4">
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="fa-solid fa-industry text-goldBase text-2xl"></i>
+                        <h3 class="font-cinzel font-bold text-lg text-goldBase">CUSTOM ORDERS & OUR OWN MANUFACTURING</h3>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        Made by us. Crafted for you. With our own manufacturing facility, we accept customised jewellery orders and bring your dream design to life.
+                    </p>
                 </div>
-                <div class="bg-white p-6 shadow-sm text-center border-b-2 border-lux-gold">
-                    <p class="text-xs text-gray-400">Silver</p>
-                    <p class="text-xl font-bold mt-2 lux-gold" id="rate-silver">₹89.50</p>
+                <div>
+                    <button onclick="alert('Custom order helpline: +91 98765 43210')" class="inline-flex items-center gap-2 bg-goldBase text-black font-cinzel font-bold text-xs px-6 py-3 rounded-xl hover:bg-goldLight transition-all">
+                        KNOW MORE <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="lux-black text-white py-10 text-center text-sm">
-        <p>&copy; 2026 Al Sayed Jewellers. All Rights Reserved.</p>
+    <!-- TRUST BADGES BAR -->
+    <section class="bg-brandCard border-y border-goldBase/20 py-6 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-certificate text-goldBase text-xl mb-1"></i>
+                <h5 class="font-cinzel font-bold text-xs text-brandDark">CERTIFIED</h5>
+                <p class="text-[10px] text-gray-600">HALLMARK JEWELLERY</p>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-shield-halved text-goldBase text-xl mb-1"></i>
+                <h5 class="font-cinzel font-bold text-xs text-brandDark">100%</h5>
+                <p class="text-[10px] text-gray-600">TRUST & TRANSPARENCY</p>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-medal text-goldBase text-xl mb-1"></i>
+                <h5 class="font-cinzel font-bold text-xs text-brandDark">BIS HALLMARK</h5>
+                <p class="text-[10px] text-gray-600">CERTIFIED</p>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-lock text-goldBase text-xl mb-1"></i>
+                <h5 class="font-cinzel font-bold text-xs text-brandDark">SECURE</h5>
+                <p class="text-[10px] text-gray-600">PAYMENT OPTIONS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-brandDark text-white py-12 px-6 border-t border-goldBase/30 text-center">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <p class="text-xs font-cinzel text-goldBase font-bold uppercase">CALL US</p>
+                <a href="tel:+919876543210" class="text-sm font-cinzel font-semibold hover:text-goldBase">+91 98765 43210</a>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <p class="text-xs font-cinzel text-goldBase font-bold uppercase">WHATSAPP US</p>
+                <a href="https://wa.me/919876543210" target="_blank" class="text-sm font-cinzel font-semibold hover:text-goldBase">+91 98765 43210</a>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-xs font-cinzel text-goldBase font-bold uppercase">FOLLOW US</p>
+                <a href="https://instagram.com/alsayedjewellers" target="_blank" class="text-sm font-cinzel font-semibold hover:text-goldBase">@alsayedjewellers</a>
+            </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-goldBase/20 text-xs text-gray-400 font-cinzel">
+            <p>© 2026 Al Sayed Jewellers — All Rights Reserved. Crafted in Delhi.</p>
+        </div>
     </footer>
 
+    <!-- AI TRY-ON MODAL -->
+    <div id="arModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-2xl flex flex-col justify-between">
+        <div class="px-6 py-4 flex justify-between items-center border-b border-goldBase/20 bg-brandDark/90 z-20">
+            <div class="flex items-center gap-3">
+                <div id="cam-status" class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                <h3 class="text-xs font-bold text-goldLight tracking-widest font-cinzel uppercase">AI Fitting Studio</h3>
+            </div>
+            <button onclick="closeTryOnModal()" class="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-all">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="relative flex-1 flex items-center justify-center overflow-hidden bg-black">
+            <div id="ai-loading" class="absolute z-30 flex flex-col items-center gap-4 bg-brandDark p-8 rounded-2xl border border-goldBase/30 text-center">
+                <div class="w-10 h-10 border-2 border-goldBase border-t-transparent rounded-full animate-spin"></div>
+                <p class="text-xs text-goldLight font-cinzel">Calibrating AR Overlay & Face Mesh...</p>
+            </div>
+
+            <video id="webcam" class="hidden" playsinline muted></video>
+            <canvas id="output_canvas" class="max-w-full max-h-full object-contain rounded-2xl"></canvas>
+
+            <!-- CAPTURE BUTTON OVERLAY -->
+            <div class="absolute bottom-8 z-30 flex justify-center w-full">
+                <button onclick="capturePhoto()" class="bg-goldBase text-black font-cinzel font-bold text-xs px-8 py-3.5 rounded-full flex items-center gap-3 border border-white/40 shadow-xl hover:bg-goldLight transition-all">
+                    <i class="fa-solid fa-camera text-sm"></i> CAPTURE & DOWNLOAD PHOTO
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const goldEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23FFD700' stroke='%23B8860B' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23D4AF37' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23D4AF37' stroke='%23FFD700' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%2303121D'/><circle cx='50' cy='95' r='8' fill='%23FFD700'/></svg>";
+        const goldNecklaceSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'><path d='M 30,20 Q 150,180 270,20' fill='none' stroke='%23D4AF37' stroke-width='14'/><path d='M 50,40 Q 150,190 250,40' fill='none' stroke='%23FAF2D3' stroke-width='6'/><circle cx='150' cy='125' r='18' fill='%23D4AF37'/></svg>";
+        const silverEarringSVG = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'><circle cx='50' cy='20' r='12' fill='%23E2E8F0' stroke='%2394A3B8' stroke-width='2'/><circle cx='50' cy='20' r='5' fill='%23FFFFFF'/><path d='M50 32 L50 60' stroke='%23CBD5E1' stroke-width='4'/><path d='M25 60 Q50 40 75 60 L85 110 Q50 160 15 110 Z' fill='%23CBD5E1' stroke='%23FFFFFF' stroke-width='3'/><circle cx='50' cy='95' r='14' fill='%2303121D'/><circle cx='50' cy='95' r='8' fill='%23FFFFFF'/></svg>";
+
+        const catalog = [
+            { id: 'g1', title: 'Royal Heritage Jhumka', metal: 'gold', category: 'earring', price: '₹92,500', image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?w=600&q=80', tryable: true, overlay: goldEarringSVG },
+            { id: 'g2', title: 'Imperial Solitaire Ring', metal: 'gold', category: 'ring', price: '₹48,000', image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&q=80', tryable: false },
+            { id: 'g3', title: '22K Heavy Rope Chain', metal: 'gold', category: 'chain', price: '₹1,32,000', image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
+            { id: 'g4', title: 'Delhi Craft Gold Pendant', metal: 'gold', category: 'pendant', price: '₹41,200', image: 'https://images.unsplash.com/photo-1611591475197-2856f6c77d48?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
+
+            { id: 's1', title: 'Silver Lotus Earrings', metal: 'silver', category: 'earring', price: '₹4,800', image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80', tryable: true, overlay: silverEarringSVG },
+            { id: 's2', title: 'Sterling Carved Band', metal: 'silver', category: 'ring', price: '₹2,900', image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&q=80', tryable: false },
+            { id: 's3', title: '925 Italian Link Chain', metal: 'silver', category: 'chain', price: '₹8,900', image: 'https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&q=80', tryable: true, overlay: goldNecklaceSVG },
+            { id: 's4', title: 'Crystal Silver Pendant', metal: 'silver', category: 'pendant', price: '₹4,200', image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=80', tryable: true, overlay: goldNecklaceSVG }
+        ];
+
+        let selectedMetal = 'gold';
+        let selectedCategory = 'all';
+        let activeItem = catalog[0];
+
+        function switchMetal(metal) {
+            selectedMetal = metal;
+            selectedCategory = 'all';
+            const tabGold = document.getElementById('tab-gold');
+            const tabSilver = document.getElementById('tab-silver');
+            const title = document.getElementById('current-collection-title');
+
+            if (metal === 'gold') {
+                tabGold.className = "px-4 py-1.5 rounded bg-brandDark text-goldBase font-bold";
+                tabSilver.className = "px-4 py-1.5 rounded bg-gray-200 text-gray-700 font-bold";
+                title.innerText = "GOLD COLLECTION CATALOGUE";
+            } else {
+                tabSilver.className = "px-4 py-1.5 rounded bg-brandDark text-goldBase font-bold";
+                tabGold.className = "px-4 py-1.5 rounded bg-gray-200 text-gray-700 font-bold";
+                title.innerText = "SILVER COLLECTION CATALOGUE";
+            }
+            renderCatalog();
+        }
+
+        function filterCategory(cat, evt) {
+            selectedCategory = cat;
+            if(evt) {
+                document.querySelectorAll('button').forEach(b => b.classList.remove('text-blue-900'));
+                evt.target.classList.add('text-blue-900');
+            }
+            renderCatalog();
+        }
+
+        function renderCatalog() {
+            const grid = document.getElementById('jewel-grid');
+            grid.innerHTML = '';
+
+            const filtered = catalog.filter(item => item.metal === selectedMetal && (selectedCategory === 'all' || item.category === selectedCategory));
+
+            if(filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-4 text-center py-10 text-gray-500 font-cinzel">No pieces found in this category. Showing all ${selectedMetal} collection.</div>`;
+                const fallback = catalog.filter(item => item.metal === selectedMetal);
+                fallback.forEach(item => appendCard(item, grid));
+                return;
+            }
+
+            filtered.forEach(item => appendCard(item, grid));
+        }
+
+        function appendCard(item, grid) {
+            const card = document.createElement('div');
+            card.className = 'bg-brandCard border border-goldBase/30 rounded-2xl overflow-hidden flex flex-col justify-between shadow-md hover:shadow-xl transition-all';
+            card.innerHTML = `
+                <div class="relative h-64 overflow-hidden group">
+                    <img src="${item.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <span class="absolute top-3 left-3 bg-brandDark text-[9px] uppercase font-bold tracking-widest px-3 py-1 rounded-full text-goldBase border border-goldBase/30">
+                        Hallmarked
+                    </span>
+                    ${item.tryable ? `
+                        <button onclick="openAIModal('${item.id}')" class="absolute bottom-3 right-3 bg-goldBase text-black font-bold text-xs px-4 py-2 rounded-full flex items-center gap-2 shadow-lg hover:bg-goldLight">
+                            <i class="fa-solid fa-camera"></i> AI Try-On
+                        </button>
+                    ` : ''}
+                </div>
+                <div class="p-5 flex justify-between items-center border-t border-goldBase/20">
+                    <div>
+                        <p class="text-[10px] font-bold text-gray-600 uppercase font-cinzel">${item.category}</p>
+                        <h4 class="font-cinzel font-bold text-sm text-brandDark">${item.title}</h4>
+                    </div>
+                    <span class="text-sm font-bold text-brandDark font-cinzel">${item.price}</span>
+                </div>
+            `;
+            grid.appendChild(card);
+        }
+
+        let faceMeshInstance = null, cameraInstance = null;
+        let overlayImg = new Image();
+
+        function openAIModal(id) {
+            const item = catalog.find(i => i.id === id);
+            if (!item || !item.overlay) return;
+            activeItem = item;
+            overlayImg.src = item.overlay;
+
+            document.getElementById('arModal').classList.remove('hidden');
+            initAI();
+        }
+
+        function closeTryOnModal() {
+            document.getElementById('arModal').classList.add('hidden');
+            if (cameraInstance) { cameraInstance.stop(); cameraInstance = null; }
+        }
+
+        async function initAI() {
+            const videoElement = document.getElementById('webcam');
+            const canvasElement = document.getElementById('output_canvas');
+            const canvasCtx = canvasElement.getContext('2d');
+
+            if (!faceMeshInstance) {
+                faceMeshInstance = new FaceMesh({
+                    locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`
+                });
+                faceMeshInstance.setOptions({ maxNumFaces: 1, refineLandmarks: true });
+                faceMeshInstance.onResults((results) => {
+                    if (!results.image) return;
+                    canvasElement.width = results.image.width;
+                    canvasElement.height = results.image.height;
+
+                    canvasCtx.save();
+                    canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+                    canvasCtx.translate(canvasElement.width, 0);
+                    canvasCtx.scale(-1, 1);
+                    canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+
+                    if (results.multiFaceLandmarks && results.multiFaceLandmarks.length > 0) {
+                        const lm = results.multiFaceLandmarks[0];
+                        const w = canvasElement.width, h = canvasElement.height;
+
+                        if (activeItem.category === 'earring') {
+                            const leftEar = lm[132] || lm[234];
+                            const rightEar = lm[361] || lm[454];
+
+                            const faceWidth = Math.hypot((leftEar.x - rightEar.x)*w, (leftEar.y - rightEar.y)*h);
+                            const earringWidth = faceWidth * 0.28; 
+                            const earringHeight = earringWidth * 1.8;
+
+                            canvasCtx.drawImage(overlayImg, (leftEar.x * w) - (earringWidth * 0.7), (leftEar.y * h) - (earringHeight * 0.1), earringWidth, earringHeight);
+                            canvasCtx.drawImage(overlayImg, (rightEar.x * w) - (earringWidth * 0.3), (rightEar.y * h) - (earringHeight * 0.1), earringWidth, earringHeight);
+                        } else {
+                            const chin = lm[152];
+                            const neckX = chin.x * w;
+                            const neckY = (chin.y * h) + (h * 0.04);
+                            const width = w * 0.38;
+                            canvasCtx.drawImage(overlayImg, neckX - width/2, neckY, width, width * 0.7);
+                        }
+                    }
+                    canvasCtx.restore();
+                });
+            }
+
+            try {
+                if (!cameraInstance) {
+                    cameraInstance = new Camera(videoElement, {
+                        onFrame: async () => { await faceMeshInstance.send({ image: videoElement }); },
+                        width: 1280, height: 720
+                    });
+                }
+                await cameraInstance.start();
+                document.getElementById('ai-loading').classList.add('hidden');
+                document.getElementById('cam-status').className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse";
+            } catch (e) {
+                document.getElementById('ai-loading').innerHTML = `<p class="text-xs text-red-400">Camera Access Required.</p>`;
+            }
+        }
+
+        function capturePhoto() {
+            const canvas = document.getElementById('output_canvas');
+            const link = document.createElement('a');
+            link.download = `AlSayed-TryOn-${Date.now()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        window.onload = () => { renderCatalog(); };
+    </script>
 </body>
 </html>
